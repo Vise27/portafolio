@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marco Vise Sernaque | Portafolio</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <!-- BoxIcons for icons -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <!-- Header / Navbar -->
+    <header class="header">
+        <a href="#" class="logo">Marco Vise</a>
+        <nav class="navbar">
+            <a href="#home" class="active">Inicio</a>
+            <a href="javascript:void(0);" onclick="openModal('modal-perfil')">Perfil</a>
+            <a href="javascript:void(0);" onclick="openModal('modal-educacion')">Educación</a>
+            <a href="#projects">Proyectos</a>
+            <a href="#experience">Exp. Laboral</a>
+            <a href="#contact">Contacto</a>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="home" id="home">
+        <div class="home-content">
+            <h3>Hola, soy</h3>
+            <h1>Marco Vise Sernaque</h1>
+            <h3>Desarrollador de <span class="multiple-text"></span></h3>
+            <p>Egresado de la carrera de Diseño y Desarrollo de Software. Apasionado por la tecnología, las bases de
+                datos y el desarrollo de aplicaciones eficientes y escalables.</p>
+            <div class="social-media">
+                <a href="https://www.linkedin.com/in/" target="_blank"><i class='bx bxl-linkedin'></i></a>
+                <a href="mailto:marco.vise19@gmail.com"><i class='bx bx-envelope'></i></a>
+                <a href="https://wa.me/51918562387" target="_blank"><i class='bx bxl-whatsapp'></i></a>
+            </div>
+            <a href="#contact" class="btn">Contáctame</a>
+        </div>
+    </section>
+
+    <!-- Perfil y Educacion se han movido a modales -->
+
+    <!-- Proyectos Section -->
+    <section class="projects" id="projects">
+        <h2 class="heading">Proyecto <span>Principal</span></h2>
+
+        <div class="projects-container">
+            <div class="project-box">
+                <div class="project-layout">
+                    <div class="project-info">
+                        <div class="project-header">
+                            <h3><i class='bx bx-mobile'></i> HiMarket </h3>
+                            <span class="project-subtitle">Sistema ERP Móvil Integral & POS Autónomo</span>
+                        </div>
+                        <p class="project-desc">Solución para digitalizar la gestión comercial de negocios. Centraliza
+                            el
+                            control de inventario, flujo de caja y ventas, ofreciendo una experiencia apoyada por
+                            Inteligencia Artificial.</p>
+                        <button class="btn btn-small" onclick="openModal('modal-himarket')">Ver más detalles</button>
+                    </div>
+                    <div class="project-image">
+                        <img src="assets/inicio.jpeg" alt="HiMarket APP Interface">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experiencia Laboral Section -->
+    <section class="experience" id="experience">
+        <h2 class="heading">Experiencia <span>Laboral</span></h2>
+
+        <div class="experience-container">
+            <!-- Job 1 -->
+            <div class="experience-box">
+                <div class="experience-info">
+                    <h4>OVEMAC - Pasante</h4>
+                    <span class="experience-date">Enero 2025 – Febrero 2025</span>
+                    <h3>Proyecto: “Aplicativo móvil CRM en fase 1”</h3>
+                    <p>Participé en el desarrollo de un aplicativo móvil para optimizar la gestión de inspecciones y
+                        presupuestos utilizando Flutter y Firebase.</p>
+                    <button class="btn btn-small" onclick="openModal('modal-ovemac')">Ver más detalles</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Contacto Section -->
+    <section class="contact" id="contact">
+        <h2 class="heading">Contáctame</h2>
+        <div class="contact-details">
+            <div class="contact-item">
+                <i class='bx bx-current-location'></i>
+                <p>Sechura-Piura</p>
+            </div>
+            <div class="contact-item">
+                <i class='bx bx-envelope'></i>
+                <p><a href="mailto:marco.vise19@gmail.com">marco.vise19@gmail.com</a></p>
+            </div>
+            <div class="contact-item">
+                <i class='bx bx-phone'></i>
+                <p>918562387</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-text">
+            <p>Copyright &copy; 2025 by Marco Vise | Todos los derechos reservados.</p>
+        </div>
+        <div class="footer-iconTop">
+            <a href="#home"><i class='bx bx-up-arrow-alt'></i></a>
+        </div>
+    </footer>
+
+    <!-- Modals -->
+    <div class="modal-overlay" id="modal-overlay"></div>
+
+    <!-- Modal Perfil -->
+    <div class="modal" id="modal-perfil">
+        <button class="close-modal" onclick="closeModal('modal-perfil')"><i class='bx bx-x'></i></button>
+        <h3 style="margin-bottom: 2rem;">Perfil <span style="color:var(--main-color)">Profesional</span></h3>
+        <p>Egresado de la carrera de Diseño y Desarrollo de Software, con conocimientos en gestión de bases de
+            datos, SQL, Excel y desarrollo de aplicaciones en <strong>Spring Boot, Laravel, Django, Kotlin,
+                Flutter</strong>. Experiencia en procesamiento y validación de información, trabajo colaborativo y
+            adaptación a entornos administrativos y técnicos.</p>
+    </div>
+
+    <!-- Modal Educación -->
+    <div class="modal" id="modal-educacion">
+        <button class="close-modal" onclick="closeModal('modal-educacion')"><i class='bx bx-x'></i></button>
+        <h3 style="margin-bottom: 2rem; font-size: 3rem;">Mi <span style="color:var(--main-color)">Educación</span></h3>
+        <div
+            style="background: var(--bg-color); padding: 2rem; border-radius: 1rem; border: 1px solid rgba(225, 29, 72, 0.2);">
+            <h3 style="font-size: 2.2rem; color: var(--text-color); margin-bottom: 0;">Diseño y Desarrollo de Software
+            </h3>
+            <p style="font-size: 1.4rem; color: #9ca3af; margin-top: 0.5rem; margin-bottom: 1rem;">2023 – 2025</p>
+            <h4 style="font-size: 1.8rem; color: var(--accent-color); margin-bottom: 1rem;">TECSUP</h4>
+            <p style="font-size: 1.5rem; line-height: 1.6;">Egresado de la carrera técnica enfocada en la creación de
+                soluciones tecnológicas modernas y estructuración de sistemas robustos.</p>
+        </div>
+    </div>
+
+    <!-- Modal OVEMAC -->
+    <div class="modal" id="modal-ovemac">
+        <button class="close-modal" onclick="closeModal('modal-ovemac')"><i class='bx bx-x'></i></button>
+        <h3>OVEMAC - Aplicativo móvil CRM en fase 1</h3>
+        <p class="modal-date">Pasante | Enero 2025 – Febrero 2025</p>
+        <p>Participé en el desarrollo de un aplicativo móvil para General Hydraulic Company (OVEMAC) con el objetivo de
+            optimizar la gestión de inspecciones, presupuestos y seguimiento en tiempo real de equipos de maquinaria
+            pesada.</p>
+        <div class="modal-section">
+            <ul>
+                <li>Desarrollé la interfaz de usuario de la aplicación móvil utilizando <strong>Flutter</strong>.</li>
+                <li>Integré <strong>Firebase</strong> como base de datos en tiempo real para almacenar y sincronizar
+                    registros de inspecciones, cronogramas y reportes.</li>
+                <li>Colaboré en el diseño modular y escalable del aplicativo, priorizando la facilidad de uso y la
+                    inducción de los empleados.</li>
+            </ul>
+        </div>
+    </div>
+
+
+
+    <!-- Modal HiMarket -->
+    <div class="modal" id="modal-himarket">
+        <button class="close-modal" onclick="closeModal('modal-himarket')"><i class='bx bx-x'></i></button>
+        <h3><i class='bx bx-mobile'></i> HiMarket</h3>
+        <p class="modal-date">Sistema ERP Móvil Integral & POS Autónomo</p>
+        <p>Solución diseñada para digitalizar la gestión comercial de negocios. Centraliza el control de inventario,
+            flujo de caja y ventas, ofreciendo una experiencia fluida apoyada por Inteligencia Artificial.</p>
+
+        <div class="modal-section">
+            <h4><i class='bx bx-star'></i> Funcionalidades Principales</h4>
+            <ul>
+                <li><strong>Asistente por Voz (NLP):</strong> Consultas de stock y operaciones manos libres con limpieza
+                    de ruido ambiente.</li>
+                <li><strong>Onboarding por OCR:</strong> Extracción de datos de DNI automáticamente con Google ML Kit.
+                </li>
+                <li><strong>Dashboard Analítico:</strong> Gráficos interactivos de ventas y flujo de caja diario en
+                    tiempo real.</li>
+                <li><strong>Gestión Multicanal:</strong> Conciliación de métodos de pago tradicionales y digitales
+                    (Yape/Plin).</li>
+                <li><strong>Alertas y WhatsApp:</strong> Notificaciones de quiebres de stock y envío de comprobantes
+                    PDF.</li>
+            </ul>
+        </div>
+
+        <div class="modal-section">
+            <h4><i class='bx bx-code-alt'></i> Stack Tecnológico</h4>
+            <div class="tech-tags">
+                <span>Flutter</span>
+                <span>Dart</span>
+                <span>Firebase</span>
+                <span>Hive (NoSQL)</span>
+                <span>Google ML Kit</span>
+                <span>Workmanager</span>
+            </div>
+        </div>
+
+        <div class="modal-section highlight">
+            <h4><i class='bx bx-brain'></i> Retos Técnicos Superados</h4>
+            <div class="challenge-item">
+                <strong>Arquitectura Offline-First:</strong>
+                <p>Diseñé un modelo híbrido utilizando Hive localmente para garantizar el registro de ventas sin
+                    conexión, sincronizando a Firebase en segundo plano vía Workmanager al recuperar la red.</p>
+            </div>
+            <div class="challenge-item">
+                <strong>Reconocimiento de Voz Eficiente:</strong>
+                <p>Integré un flujo de comandos de voz que limpia el ruido ambiente e interpreta intenciones para
+                    agilizar operaciones del dashboard sin tocar la pantalla.</p>
+            </div>
+        </div>
+
+        <div class="modal-section">
+            <h4><i class='bx bx-images'></i> Capturas Adicionales</h4>
+            <div class="modal-gallery">
+                <img src="assets/inicio.jpeg" alt="Captura 1" onerror="this.style.display='none'">
+                <img src="assets/produc.jpeg" alt="Captura 2" onerror="this.style.display='none'">
+                <img src="assets/analiticas.jpeg" alt="Captura 3" onerror="this.style.display='none'">
+                <img src="assets/analiticas2.jpeg" alt="Captura 4" onerror="this.style.display='none'">
+                <img src="assets/caja.jpeg" alt="Captura 5" onerror="this.style.display='none'">
+                <img src="assets/pdf.jpeg" alt="Captura 6" onerror="this.style.display='none'">
+            </div>
+            <p style="font-size: 1.3rem; margin-top: 1rem; color: #9ca3af; font-style: italic;">Por favor guarda tus 6
+                imágenes en la carpeta assets como himarket1.jpeg hasta himarket6.jpeg</p>
+        </div>
+    </div>
+
+    <!-- Typed JS for typing animation -->
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
