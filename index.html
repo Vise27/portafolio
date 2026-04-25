@@ -8,23 +8,29 @@
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
     <!-- BoxIcons for icons -->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
+    <!-- Background Decoration -->
+    <div class="bg-decoration">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+    </div>
 
     <!-- Header / Navbar -->
     <header class="header">
-        <a href="#" class="logo">Marco Vise</a>
+        <a href="#" class="logo">Marco<span>Vise</span></a>
         <nav class="navbar">
             <a href="#home" class="active">Inicio</a>
-            <a href="javascript:void(0);" onclick="openModal('modal-perfil')">Perfil</a>
-            <a href="javascript:void(0);" onclick="openModal('modal-educacion')">Educación</a>
+            <a href="#about">Sobre Mí</a>
+            <a href="#experience">Experiencia</a>
             <a href="#projects">Proyectos</a>
-            <a href="#experience">Exp. Laboral</a>
+            <a href="#education">Educación</a>
             <a href="#contact">Contacto</a>
         </nav>
     </header>
@@ -35,36 +41,78 @@
             <h3>Hola, soy</h3>
             <h1>Marco Vise Sernaque</h1>
             <h3>Desarrollador de <span class="multiple-text"></span></h3>
-            <p>Egresado de la carrera de Diseño y Desarrollo de Software. Apasionado por la tecnología, las bases de
-                datos y el desarrollo de aplicaciones eficientes y escalables.</p>
+            <p>Egresado de Diseño y Desarrollo de Software. Especializado en crear soluciones escalables con Flutter, Firebase y arquitecturas modernas.</p>
             <div class="social-media">
-                <a href="https://www.linkedin.com/in/" target="_blank"><i class='bx bxl-linkedin'></i></a>
+                <a href="https://www.linkedin.com/in/marco-vise" target="_blank"><i class='bx bxl-linkedin'></i></a>
+                <a href="https://github.com/Vise27" target="_blank"><i class='bx bxl-github'></i></a>
                 <a href="mailto:marco.vise19@gmail.com"><i class='bx bx-envelope'></i></a>
                 <a href="https://wa.me/51918562387" target="_blank"><i class='bx bxl-whatsapp'></i></a>
             </div>
-            <a href="#contact" class="btn">Contáctame</a>
+            <div class="home-btns">
+                <a href="#contact" class="btn">Contáctame</a>
+                <a href="#experience" class="btn btn-outline">Ver Experiencia</a>
+            </div>
         </div>
     </section>
 
-    <!-- Perfil y Educacion se han movido a modales -->
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="about-content">
+            <h2 class="heading">Sobre <span>Mí</span></h2>
+            <div class="about-grid">
+                <div class="about-info">
+                    <p>Soy un <strong>Desarrollador Junior</strong> egresado de la carrera de Diseño y Desarrollo de Software, con una sólida base en gestión de bases de datos y desarrollo multiplataforma. Me apasiona transformar ideas complejas en aplicaciones eficientes y fáciles de usar.</p>
+                    <p>Enfocado en el ecosistema de <strong>Flutter, Spring Boot, Laravel y Django</strong>, siempre buscando aprender nuevas tecnologías y arquitecturas para optimizar procesos.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section (Highlighted) -->
+    <section class="experience" id="experience">
+        <h2 class="heading">Experiencia <span>Profesional</span></h2>
+        <div class="experience-showcase">
+            <!-- Featured Experience -->
+            <div class="exp-card featured">
+                <div class="exp-header">
+                    <div class="exp-title-group">
+                        <span class="exp-badge">Más Reciente</span>
+                        <h3>OVEMAC</h3>
+                        <h4>Pasante - Desarrollador Mobile CRM</h4>
+                    </div>
+                    <span class="exp-date">Enero 2025 – Febrero 2025</span>
+                </div>
+                <div class="exp-body">
+                    <p>Lideré la fase 1 del aplicativo móvil CRM para General Hydraulic Company, optimizando la gestión de inspecciones y presupuestos para maquinaria pesada.</p>
+                    <div class="exp-tags">
+                        <span>Flutter</span>
+                        <span>Firebase</span>
+                        <span>Modular Architecture</span>
+                        <span>Real-time Sync</span>
+                    </div>
+                    <ul class="exp-list">
+                        <li><i class='bx bx-check-circle'></i> Desarrollé una interfaz intuitiva con Flutter reduciendo el tiempo de inducción del personal.</li>
+                        <li><i class='bx bx-check-circle'></i> Implementé sincronización en tiempo real con Firebase para reportes críticos.</li>
+                        <li><i class='bx bx-check-circle'></i> Colaboré en el diseño de un sistema modular escalable para futuras fases.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <!-- Proyectos Section -->
     <section class="projects" id="projects">
-        <h2 class="heading">Proyecto <span>Principal</span></h2>
-
+        <h2 class="heading">Proyecto <span>Destacado</span></h2>
         <div class="projects-container">
-            <div class="project-box">
+            <div class="project-box glass">
                 <div class="project-layout">
                     <div class="project-info">
                         <div class="project-header">
                             <h3><i class='bx bx-mobile'></i> HiMarket </h3>
-                            <span class="project-subtitle">Sistema ERP Móvil Integral & POS Autónomo</span>
+                            <span class="project-subtitle">Sistema ERP Móvil & AI POS</span>
                         </div>
-                        <p class="project-desc">Solución para digitalizar la gestión comercial de negocios. Centraliza
-                            el
-                            control de inventario, flujo de caja y ventas, ofreciendo una experiencia apoyada por
-                            Inteligencia Artificial.</p>
-                        <button class="btn btn-small" onclick="openModal('modal-himarket')">Ver más detalles</button>
+                        <p class="project-desc"><strong>Proyecto de Tesis (En desarrollo - casi terminado).</strong> Solución integral para negocios con control de inventario, caja y ventas asistidas por IA y OCR. Arquitectura offline-first de alto rendimiento.</p>
+                        <button class="btn btn-small" onclick="openModal('modal-himarket')">Detalles del Proyecto</button>
                     </div>
                     <div class="project-image">
                         <img src="assets/inicio.jpeg" alt="HiMarket APP Interface">
@@ -74,42 +122,74 @@
         </div>
     </section>
 
-    <!-- Experiencia Laboral Section -->
-    <section class="experience" id="experience">
-        <h2 class="heading">Experiencia <span>Laboral</span></h2>
-
-        <div class="experience-container">
-            <!-- Job 1 -->
-            <div class="experience-box">
-                <div class="experience-info">
-                    <h4>OVEMAC - Pasante</h4>
-                    <span class="experience-date">Enero 2025 – Febrero 2025</span>
-                    <h3>Proyecto: “Aplicativo móvil CRM en fase 1”</h3>
-                    <p>Participé en el desarrollo de un aplicativo móvil para optimizar la gestión de inspecciones y
-                        presupuestos utilizando Flutter y Firebase.</p>
-                    <button class="btn btn-small" onclick="openModal('modal-ovemac')">Ver más detalles</button>
+    <!-- Education Section -->
+    <section class="education" id="education">
+        <h2 class="heading">Mi <span>Educación</span></h2>
+        <div class="education-container">
+            <div class="edu-card">
+                <div class="edu-icon"><i class='bx bxs-graduation'></i></div>
+                <div class="edu-info">
+                    <h3>Diseño y Desarrollo de Software</h3>
+                    <h4>TECSUP</h4>
+                    <span class="edu-date">2023 – 2025</span>
+                    <p>Formación técnica especializada en la creación de soluciones tecnológicas robustas y modernas.</p>
                 </div>
             </div>
         </div>
     </section>
 
-
+    <!-- Skills Section -->
+    <section class="skills" id="skills">
+        <h2 class="heading">Mis <span>Habilidades</span></h2>
+        <div class="skills-grid">
+            <div class="skill-category">
+                <h3><i class='bx bx-code-alt'></i> Frontend & Mobile</h3>
+                <div class="skill-tags">
+                    <span>Flutter</span>
+                    <span>Dart</span>
+                    <span>JavaScript</span>
+                    <span>HTML/CSS</span>
+                </div>
+            </div>
+            <div class="skill-category">
+                <h3><i class='bx bx-server'></i> Backend & DB</h3>
+                <div class="skill-tags">
+                    <span>Spring Boot</span>
+                    <span>Laravel</span>
+                    <span>Django</span>
+                    <span>SQL / Firebase</span>
+                </div>
+            </div>
+            <div class="skill-category">
+                <h3><i class='bx bx-wrench'></i> Herramientas</h3>
+                <div class="skill-tags">
+                    <span>Git</span>
+                    <span>Google ML Kit</span>
+                    <span>Hive (NoSQL)</span>
+                    <span>Excel</span>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <!-- Contacto Section -->
     <section class="contact" id="contact">
-        <h2 class="heading">Contáctame</h2>
+        <h2 class="heading">¿Hablamos? <span>Contacto</span></h2>
         <div class="contact-details">
-            <div class="contact-item">
+            <div class="contact-item glass">
                 <i class='bx bx-current-location'></i>
-                <p>Sechura-Piura</p>
+                <h3>Ubicación</h3>
+                <p>Sechura - Piura, Perú</p>
             </div>
-            <div class="contact-item">
+            <div class="contact-item glass">
                 <i class='bx bx-envelope'></i>
+                <h3>Email</h3>
                 <p><a href="mailto:marco.vise19@gmail.com">marco.vise19@gmail.com</a></p>
             </div>
-            <div class="contact-item">
+            <div class="contact-item glass">
                 <i class='bx bx-phone'></i>
-                <p>918562387</p>
+                <h3>Teléfono</h3>
+                <p>+51 918 562 387</p>
             </div>
         </div>
     </section>
@@ -117,7 +197,7 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="footer-text">
-            <p>Copyright &copy; 2025 by Marco Vise | Todos los derechos reservados.</p>
+            <p>&copy; 2025 Marco Vise | Desarrollador de Software</p>
         </div>
         <div class="footer-iconTop">
             <a href="#home"><i class='bx bx-up-arrow-alt'></i></a>
@@ -127,111 +207,25 @@
     <!-- Modals -->
     <div class="modal-overlay" id="modal-overlay"></div>
 
-    <!-- Modal Perfil -->
-    <div class="modal" id="modal-perfil">
-        <button class="close-modal" onclick="closeModal('modal-perfil')"><i class='bx bx-x'></i></button>
-        <h3 style="margin-bottom: 2rem;">Perfil <span style="color:var(--main-color)">Profesional</span></h3>
-        <p>Egresado de la carrera de Diseño y Desarrollo de Software, con conocimientos en gestión de bases de
-            datos, SQL, Excel y desarrollo de aplicaciones en <strong>Spring Boot, Laravel, Django, Kotlin,
-                Flutter</strong>. Experiencia en procesamiento y validación de información, trabajo colaborativo y
-            adaptación a entornos administrativos y técnicos.</p>
-    </div>
-
-    <!-- Modal Educación -->
-    <div class="modal" id="modal-educacion">
-        <button class="close-modal" onclick="closeModal('modal-educacion')"><i class='bx bx-x'></i></button>
-        <h3 style="margin-bottom: 2rem; font-size: 3rem;">Mi <span style="color:var(--main-color)">Educación</span></h3>
-        <div
-            style="background: var(--bg-color); padding: 2rem; border-radius: 1rem; border: 1px solid rgba(225, 29, 72, 0.2);">
-            <h3 style="font-size: 2.2rem; color: var(--text-color); margin-bottom: 0;">Diseño y Desarrollo de Software
-            </h3>
-            <p style="font-size: 1.4rem; color: #9ca3af; margin-top: 0.5rem; margin-bottom: 1rem;">2023 – 2025</p>
-            <h4 style="font-size: 1.8rem; color: var(--accent-color); margin-bottom: 1rem;">TECSUP</h4>
-            <p style="font-size: 1.5rem; line-height: 1.6;">Egresado de la carrera técnica enfocada en la creación de
-                soluciones tecnológicas modernas y estructuración de sistemas robustos.</p>
-        </div>
-    </div>
-
-    <!-- Modal OVEMAC -->
-    <div class="modal" id="modal-ovemac">
-        <button class="close-modal" onclick="closeModal('modal-ovemac')"><i class='bx bx-x'></i></button>
-        <h3>OVEMAC - Aplicativo móvil CRM en fase 1</h3>
-        <p class="modal-date">Pasante | Enero 2025 – Febrero 2025</p>
-        <p>Participé en el desarrollo de un aplicativo móvil para General Hydraulic Company (OVEMAC) con el objetivo de
-            optimizar la gestión de inspecciones, presupuestos y seguimiento en tiempo real de equipos de maquinaria
-            pesada.</p>
-        <div class="modal-section">
-            <ul>
-                <li>Desarrollé la interfaz de usuario de la aplicación móvil utilizando <strong>Flutter</strong>.</li>
-                <li>Integré <strong>Firebase</strong> como base de datos en tiempo real para almacenar y sincronizar
-                    registros de inspecciones, cronogramas y reportes.</li>
-                <li>Colaboré en el diseño modular y escalable del aplicativo, priorizando la facilidad de uso y la
-                    inducción de los empleados.</li>
-            </ul>
-        </div>
-    </div>
-
-
-
     <!-- Modal HiMarket -->
-    <div class="modal" id="modal-himarket">
+    <div class="modal glass" id="modal-himarket">
         <button class="close-modal" onclick="closeModal('modal-himarket')"><i class='bx bx-x'></i></button>
         <h3><i class='bx bx-mobile'></i> HiMarket</h3>
         <p class="modal-date">Sistema ERP Móvil Integral & POS Autónomo</p>
-        <p>Solución diseñada para digitalizar la gestión comercial de negocios. Centraliza el control de inventario,
-            flujo de caja y ventas, ofreciendo una experiencia fluida apoyada por Inteligencia Artificial.</p>
-
-        <div class="modal-section">
-            <h4><i class='bx bx-star'></i> Funcionalidades Principales</h4>
-            <ul>
-                <li><strong>Asistente por Voz (NLP):</strong> Consultas de stock y operaciones manos libres con limpieza
-                    de ruido ambiente.</li>
-                <li><strong>Onboarding por OCR:</strong> Extracción de datos de DNI automáticamente con Google ML Kit.
-                </li>
-                <li><strong>Dashboard Analítico:</strong> Gráficos interactivos de ventas y flujo de caja diario en
-                    tiempo real.</li>
-                <li><strong>Gestión Multicanal:</strong> Conciliación de métodos de pago tradicionales y digitales
-                    (Yape/Plin).</li>
-                <li><strong>Alertas y WhatsApp:</strong> Notificaciones de quiebres de stock y envío de comprobantes
-                    PDF.</li>
-            </ul>
-        </div>
-
-        <div class="modal-section">
-            <h4><i class='bx bx-code-alt'></i> Stack Tecnológico</h4>
-            <div class="tech-tags">
-                <span>Flutter</span>
-                <span>Dart</span>
-                <span>Firebase</span>
-                <span>Hive (NoSQL)</span>
-                <span>Google ML Kit</span>
-                <span>Workmanager</span>
+        
+        <div class="modal-body">
+            <div class="modal-section">
+                <h4><i class='bx bx-star'></i> Funcionalidades Clave</h4>
+                <ul>
+                    <li><strong>Asistente por Voz:</strong> Consultas mediante NLP.</li>
+                    <li><strong>Onboarding OCR:</strong> Registro automático con ML Kit.</li>
+                    <li><strong>Offline-First:</strong> Sincronización inteligente con Firebase.</li>
+                </ul>
             </div>
-        </div>
-
-        <div class="modal-section highlight">
-            <h4><i class='bx bx-brain'></i> Retos Técnicos Superados</h4>
-            <div class="challenge-item">
-                <strong>Arquitectura Offline-First:</strong>
-                <p>Diseñé un modelo híbrido utilizando Hive localmente para garantizar el registro de ventas sin
-                    conexión, sincronizando a Firebase en segundo plano vía Workmanager al recuperar la red.</p>
-            </div>
-            <div class="challenge-item">
-                <strong>Reconocimiento de Voz Eficiente:</strong>
-                <p>Integré un flujo de comandos de voz que limpia el ruido ambiente e interpreta intenciones para
-                    agilizar operaciones del dashboard sin tocar la pantalla.</p>
-            </div>
-        </div>
-
-        <div class="modal-section">
-            <h4><i class='bx bx-images'></i> Capturas Adicionales</h4>
             <div class="modal-gallery">
-                <img src="assets/inicio.jpeg" alt="Captura 1" onerror="this.style.display='none'">
-                <img src="assets/produc.jpeg" alt="Captura 2" onerror="this.style.display='none'">
-                <img src="assets/analiticas.jpeg" alt="Captura 3" onerror="this.style.display='none'">
-                <img src="assets/analiticas2.jpeg" alt="Captura 4" onerror="this.style.display='none'">
-                <img src="assets/caja.jpeg" alt="Captura 5" onerror="this.style.display='none'">
-                <img src="assets/pdf.jpeg" alt="Captura 6" onerror="this.style.display='none'">
+                <img src="assets/inicio.jpeg" alt="HiMarket">
+                <img src="assets/produc.jpeg" alt="Products">
+                <img src="assets/analiticas.jpeg" alt="Analytics">
             </div>
         </div>
     </div>
@@ -240,5 +234,4 @@
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
     <script src="script.js"></script>
 </body>
-
 </html>
