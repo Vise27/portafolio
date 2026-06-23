@@ -14,12 +14,12 @@ h1, h2, h3, h4, .logo, .btn {
 }
 
 :root {
-    --bg-color: #030712;
-    --second-bg-color: #0f172a;
+    --bg-color: #18181b;
+    --second-bg-color: #27272a;
     --text-color: #f8fafc;
-    --main-color: #38bdf8;
-    --accent-color: #818cf8;
-    --glass-bg: rgba(15, 23, 42, 0.7);
+    --main-color: #fb7185;
+    --accent-color: #fb923c;
+    --glass-bg: rgba(24, 24, 27, 0.8);
     --glass-border: rgba(255, 255, 255, 0.1);
     --gradient: linear-gradient(135deg, var(--main-color), var(--accent-color));
 }
@@ -191,7 +191,7 @@ section {
     background: var(--main-color);
     color: var(--bg-color);
     transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(56, 189, 248, 0.3);
+    box-shadow: 0 10px 20px rgba(251, 113, 133, 0.3);
 }
 
 .btn {
@@ -204,12 +204,12 @@ section {
     letter-spacing: .05rem;
     font-weight: 700;
     transition: .4s;
-    box-shadow: 0 10px 20px rgba(56, 189, 248, 0.2);
+    box-shadow: 0 10px 20px rgba(251, 113, 133, 0.2);
 }
 
 .btn:hover {
     transform: scale(1.05);
-    box-shadow: 0 15px 30px rgba(56, 189, 248, 0.4);
+    box-shadow: 0 15px 30px rgba(251, 113, 133, 0.4);
 }
 
 /* Section Headings */
@@ -259,7 +259,7 @@ section {
 
 /* Experience Section (Highlighted) */
 .experience {
-    background: rgba(56, 189, 248, 0.03);
+    background: rgba(251, 113, 133, 0.03);
     position: relative;
     padding: 12rem 9%;
 }
@@ -272,7 +272,7 @@ section {
 .exp-card {
     background: var(--glass-bg);
     backdrop-filter: blur(15px);
-    border: 1px solid rgba(56, 189, 248, 0.2);
+    border: 1px solid rgba(251, 113, 133, 0.2);
     border-radius: 2.5rem;
     padding: 4rem;
     transition: .4s;
@@ -308,7 +308,7 @@ section {
 .exp-badge {
     display: inline-block;
     padding: 0.5rem 1.5rem;
-    background: rgba(56, 189, 248, 0.1);
+    background: rgba(251, 113, 133, 0.1);
     color: var(--main-color);
     border-radius: 5rem;
     font-size: 1.2rem;
@@ -486,13 +486,13 @@ section {
 }
 
 .project-box.glass {
-    border: 1px solid rgba(56, 189, 248, 0.3);
-    box-shadow: 0 0 20px rgba(56, 189, 248, 0.1);
+    border: 1px solid rgba(251, 113, 133, 0.3);
+    box-shadow: 0 0 20px rgba(251, 113, 133, 0.1);
     transition: .4s;
 }
 
 .project-box.glass:hover {
-    box-shadow: 0 0 30px rgba(56, 189, 248, 0.2);
+    box-shadow: 0 0 30px rgba(251, 113, 133, 0.2);
     border-color: var(--main-color);
 }
 
@@ -618,7 +618,7 @@ section {
 
 .footer-iconTop a:hover {
     transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(56, 189, 248, 0.3);
+    box-shadow: 0 10px 20px rgba(251, 113, 133, 0.3);
 }
 
 /* Responsive */
@@ -645,8 +645,7 @@ section {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.8);
-    backdrop-filter: blur(10px);
+    background: rgba(0, 0, 0, 0.9);
     z-index: 1000;
     display: none;
     opacity: 0;
@@ -708,7 +707,7 @@ section {
 }
 
 .modal-section ul li::before {
-    content: '▹';
+    content: '\25B8';
     position: absolute;
     left: 0;
     color: var(--main-color);
