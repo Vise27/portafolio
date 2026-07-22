@@ -645,7 +645,9 @@ section {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.9);
+    background: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
     z-index: 1000;
     display: none;
     opacity: 0;
@@ -660,28 +662,55 @@ section {
     width: 90%;
     max-width: 800px;
     max-height: 85vh;
-    overflow-y: auto;
-    padding: 5rem;
+    overflow-y: hidden;
+    padding: 0;
     z-index: 1001;
     display: none;
     opacity: 0;
     transition: .4s;
 }
 
-.modal.active, .modal-overlay.active {
+.modal-scroll {
+    overflow-y: auto;
+    max-height: 85vh;
+    padding: 5rem;
+}
+
+.modal.active {
     display: block;
     opacity: 1;
     transform: translate(-50%, -50%) scale(1);
 }
 
+.modal-overlay.active {
+    display: block;
+    opacity: 1;
+}
+
 .close-modal {
     position: absolute;
-    top: 2rem;
-    right: 2rem;
-    background: none;
+    top: 1.5rem;
+    right: 1.5rem;
+    background: rgba(24, 24, 27, 0.9);
+    width: 4.5rem;
+    height: 4.5rem;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     font-size: 3.5rem;
     color: var(--text-color);
     cursor: pointer;
+    z-index: 10;
+    border: 1px solid var(--glass-border);
+    backdrop-filter: blur(10px);
+    transition: 0.3s;
+}
+
+.close-modal:hover {
+    background: var(--main-color);
+    color: var(--bg-color);
+    transform: scale(1.1);
 }
 
 .modal h3 {
