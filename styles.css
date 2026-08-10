@@ -674,6 +674,7 @@ section {
     overflow-y: auto;
     max-height: 85vh;
     padding: 5rem;
+    overscroll-behavior: contain;
 }
 
 .modal.active {
@@ -755,3 +756,123 @@ section {
     border: 1px solid var(--glass-border);
 }
 
+
+
+/* Project status and secondary project */
+.status-development {
+    color: #fbbf24;
+}
+
+.project-box-secondary {
+    margin-top: 3rem;
+}
+
+.project-techs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 3rem;
+}
+
+.project-techs span {
+    padding: 0.6rem 1.4rem;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--glass-border);
+    border-radius: 1rem;
+    font-size: 1.4rem;
+    color: #cbd5e1;
+}
+
+.project-visual-placeholder {
+    flex: 1 1 300px;
+    min-height: 240px;
+    border: 1px dashed rgba(251, 113, 133, 0.3);
+    border-radius: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    color: #64748b;
+    background: rgba(255, 255, 255, 0.02);
+}
+
+.project-visual-placeholder i {
+    font-size: 6rem;
+    color: var(--main-color);
+}
+
+.project-visual-placeholder span {
+    font-size: 1.5rem;
+}
+
+/* Lightbox para Imágenes */
+.image-lightbox {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(15, 23, 42, 0.95);
+    backdrop-filter: blur(5px);
+    z-index: 2000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.3s ease;
+}
+
+.image-lightbox.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.lightbox-img {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 1.5rem;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+    transform: scale(0.9);
+    transition: 0.3s ease;
+}
+
+.image-lightbox.active .lightbox-img {
+    transform: scale(1);
+}
+
+.close-lightbox {
+    position: absolute;
+    top: 3rem;
+    right: 3rem;
+    font-size: 4rem;
+    color: var(--text-color);
+    cursor: pointer;
+    transition: 0.3s;
+    z-index: 2001;
+}
+
+.close-lightbox:hover {
+    color: var(--main-color);
+    transform: scale(1.1);
+}
+
+.modal-gallery img, .project-image img {
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.modal-gallery img:hover, .project-image img:hover {
+    transform: scale(1.02);
+}
+
+@media (max-width: 768px) {
+    .project-box-secondary {
+        margin-top: 2rem;
+    }
+
+    .project-visual-placeholder {
+        min-height: 180px;
+    }
+}

@@ -117,3 +117,43 @@ if (modalOverlay) {
         document.body.style.overflow = 'auto';
     });
 }
+
+// Image Lightbox Functions
+const imageLightbox = document.getElementById('image-lightbox');
+const lightboxImg = document.getElementById('lightbox-img');
+
+function openImageLightbox(src) {
+    if(imageLightbox && lightboxImg) {
+        lightboxImg.src = src;
+        imageLightbox.classList.add('active');
+        document.body.style.overflow = 'hidden';
+    }
+}
+
+function closeImageLightbox() {
+    if(imageLightbox) {
+        imageLightbox.classList.remove('active');
+        lightboxImg.src = '';
+        if(!document.querySelector('.modal.active')) {
+            document.body.style.overflow = 'auto';
+        }
+    }
+}
+
+if (imageLightbox) {
+    imageLightbox.addEventListener('click', (e) => {
+        if (e.target === imageLightbox) {
+            closeImageLightbox();
+        }
+    });
+}
+
+// Add click event to images
+document.addEventListener('DOMContentLoaded', () => {
+    const clickableImages = document.querySelectorAll('.modal-gallery img, .project-image img');
+    clickableImages.forEach(img => {
+        img.addEventListener('click', () => {
+            openImageLightbox(img.src);
+        });
+    });
+});
