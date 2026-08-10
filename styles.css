@@ -212,6 +212,26 @@ section {
     box-shadow: 0 15px 30px rgba(251, 113, 133, 0.4);
 }
 
+.btn.btn-outline {
+    background: transparent;
+    border: 2px solid var(--main-color);
+    color: var(--main-color);
+    box-shadow: none;
+}
+
+.btn.btn-outline:hover {
+    background: var(--main-color);
+    color: var(--bg-color);
+}
+
+.home-btns {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+}
+
 /* Section Headings */
 .heading {
     text-align: center;
@@ -770,17 +790,20 @@ section {
 .project-techs {
     display: flex;
     flex-wrap: wrap;
-    gap: 1rem;
-    margin-bottom: 3rem;
+    gap: 1.2rem;
+    margin-bottom: 3.5rem;
+    margin-top: 0.5rem;
 }
 
 .project-techs span {
-    padding: 0.6rem 1.4rem;
-    background: rgba(255, 255, 255, 0.05);
-    border: 1px solid var(--glass-border);
-    border-radius: 1rem;
-    font-size: 1.4rem;
-    color: #cbd5e1;
+    padding: 0.5rem 1.5rem;
+    background: rgba(251, 113, 133, 0.05);
+    border: 1px solid rgba(251, 113, 133, 0.15);
+    border-radius: 5rem;
+    font-size: 1.3rem;
+    color: var(--main-color);
+    font-weight: 500;
+    letter-spacing: 0.5px;
 }
 
 .project-visual-placeholder {
