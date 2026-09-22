@@ -9,7 +9,12 @@
     font-family: 'Inter', sans-serif;
 }
 
-h1, h2, h3, h4, .logo, .btn {
+h1,
+h2,
+h3,
+h4,
+.logo,
+.btn {
     font-family: 'Plus Jakarta Sans', sans-serif;
 }
 
@@ -82,8 +87,13 @@ section {
 }
 
 @keyframes move {
-    from { transform: translate(0, 0) scale(1); }
-    to { transform: translate(100px, 100px) scale(1.2); }
+    from {
+        transform: translate(0, 0) scale(1);
+    }
+
+    to {
+        transform: translate(100px, 100px) scale(1.2);
+    }
 }
 
 /* Header */
@@ -563,7 +573,7 @@ section {
     max-width: 320px;
     width: 100%;
     border-radius: 2rem;
-    box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
 }
 
 /* Contact Section */
@@ -646,12 +656,15 @@ section {
     .home-content h1 {
         font-size: 5rem;
     }
+
     .heading {
         font-size: 3.5rem;
     }
+
     .navbar {
         display: none;
     }
+
     .edu-card {
         flex-direction: column;
         text-align: center;
@@ -856,7 +869,7 @@ section {
     max-width: 90%;
     max-height: 90%;
     border-radius: 1.5rem;
-    box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
     transform: scale(0.9);
     transition: 0.3s ease;
 }
@@ -881,12 +894,14 @@ section {
     transform: scale(1.1);
 }
 
-.modal-gallery img, .project-image img {
+.modal-gallery img,
+.project-image img {
     cursor: pointer;
     transition: transform 0.3s ease;
 }
 
-.modal-gallery img:hover, .project-image img:hover {
+.modal-gallery img:hover,
+.project-image img:hover {
     transform: scale(1.02);
 }
 

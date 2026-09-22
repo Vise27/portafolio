@@ -61,7 +61,7 @@
             <h2 class="heading">Sobre <span>Mí</span></h2>
             <div class="about-grid">
                 <div class="about-info">
-                    <p>Soy un <strong>Desarrollador de Software Full Stack</strong> interesado en construir soluciones que resuelvan necesidades reales de negocio. He participado en el desarrollo de sistemas empresariales y actualmente desarrollo una plataforma SaaS orientada a clínicas ocupacionales.</p>
+                    <p>Soy un <strong>Desarrollador de Software Full Stack</strong> interesado en construir soluciones que resuelvan necesidades reales de negocio. He participado en el desarrollo de sistemas empresariales.</p>
                     <p>Mi experiencia incluye <strong>Odoo, Django, React y PostgreSQL</strong>, además de herramientas como Docker, Git, Redis, Celery y AWS. Me interesa seguir creciendo en el desarrollo backend y frontend, creando aplicaciones mantenibles y preparadas para crecer.</p>
                 </div>
             </div>
@@ -115,30 +115,6 @@
                     </div>
                     <div class="project-image">
                         <img src="assets/odoo_1.png" alt="Sistema Inmobiliario Odoo CRM" style="border-radius: 2rem; box-shadow: 0 10px 30px rgba(0,0,0,0.5); width: 100%;">
-                    </div>
-                </div>
-            </div>
-
-            <div class="project-box glass project-box-secondary">
-                <div class="project-layout">
-                    <div class="project-info">
-                        <div class="project-header">
-                            <h3><i class='bx bx-plus-medical'></i> SaaS para Clínicas Ocupacionales</h3>
-                            <span class="project-subtitle">Django + React | <strong class="status-development">En Desarrollo</strong></span>
-                        </div>
-                        <p class="project-desc">Plataforma web orientada a la gestión de clínicas ocupacionales, diseñada para trabajar con múltiples clínicas y centralizar procesos, información médica y reportes empresariales.</p>
-                        <div class="project-techs">
-                            <span>Django</span>
-                            <span>React</span>
-                            <span>PostgreSQL</span>
-                            <span>Docker</span>
-                            <span>Redis</span>
-                            <span>Celery</span>
-                        </div>
-                        <button class="btn btn-small" onclick="openModal('modal-clinicas')">Detalles del Proyecto</button>
-                    </div>
-                    <div class="project-image">
-                        <img src="assets/clinicas_main.png" alt="SaaS Clínicas Ocupacionales" style="border-radius: 2rem; box-shadow: 0 10px 30px rgba(0,0,0,0.5); width: 100%;">
                     </div>
                 </div>
             </div>
@@ -272,52 +248,6 @@
         </div>
     </div>
 
-
-    <!-- Modal Clínicas Ocupacionales -->
-    <div class="modal glass" id="modal-clinicas">
-        <button class="close-modal" onclick="closeModal('modal-clinicas')"><i class='bx bx-x'></i></button>
-        <div class="modal-scroll">
-            <h3><i class='bx bx-plus-medical'></i> SaaS para Clínicas Ocupacionales</h3>
-            <p class="modal-date">Django + React | <strong class="status-development">En Desarrollo</strong></p>
-
-            <div class="modal-body">
-                <p style="font-size: 1.6rem; color: #cbd5e1; margin-bottom: 2rem; line-height: 1.7;">
-                    Plataforma SaaS orientada a clínicas ocupacionales para gestionar sus procesos internos y facilitar el acceso a información y reportes relacionados con los trabajadores evaluados.
-                    El sistema está diseñado con una arquitectura multi-clínica para permitir que distintas organizaciones utilicen la plataforma de forma segura.
-                </p>
-
-                <div class="modal-section">
-                    <h4><i class='bx bx-star'></i> Enfoque del Proyecto</h4>
-                    <ul>
-                        <li><strong>Gestión multi-clínica:</strong> Arquitectura preparada para trabajar con múltiples clínicas dentro de la misma plataforma.</li>
-                        <li><strong>Gestión de pacientes:</strong> Registro y seguimiento de trabajadores que realizan evaluaciones ocupacionales.</li>
-                        <li><strong>Reportes empresariales:</strong> Las empresas pueden consultar información y reportes de sus trabajadores evaluados.</li>
-                        <li><strong>Procesos en segundo plano:</strong> Uso de Celery y Redis para tareas que no necesitan ejecutarse directamente durante la solicitud.</li>
-                    </ul>
-                </div>
-
-                <div class="modal-section" style="margin-top: 2rem;">
-                    <h4><i class='bx bx-code-alt'></i> Tecnologías</h4>
-                    <div class="skill-tags" style="display: flex; gap: 10px; flex-wrap: wrap; margin-top: 1rem;">
-                        <span>Django</span>
-                        <span>Django REST Framework</span>
-                        <span>React</span>
-                        <span>Vite</span>
-                        <span>PostgreSQL</span>
-                        <span>Docker</span>
-                        <span>Redis</span>
-                        <span>Celery</span>
-                    </div>
-                </div>
-
-                <div class="modal-gallery">
-                    <img src="assets/clinicas_1.png" alt="Dashboard Clínicas" title="Dashboard Principal">
-                    <img src="assets/clinicas_2.png" alt="Gestión de Pacientes" title="Gestión de Pacientes">
-                    <img src="assets/clinicas_3.png" alt="Reportes Empresariales" title="Reportes Empresariales">
-                </div>
-            </div>
-        </div>
-    </div>
 
     <!-- Lightbox para Imágenes -->
     <div class="image-lightbox" id="image-lightbox">
