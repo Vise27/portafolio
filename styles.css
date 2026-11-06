@@ -22,11 +22,24 @@ h4,
     --bg-color: #18181b;
     --second-bg-color: #27272a;
     --text-color: #f8fafc;
+    --text-muted: #94a3b8;
     --main-color: #fb7185;
     --accent-color: #fb923c;
     --glass-bg: rgba(24, 24, 27, 0.8);
     --glass-border: rgba(255, 255, 255, 0.1);
     --gradient: linear-gradient(135deg, var(--main-color), var(--accent-color));
+}
+
+[data-theme="light"] {
+    --bg-color: #f8fafc;
+    --second-bg-color: #f1f5f9;
+    --text-color: #0f172a;
+    --text-muted: #64748b;
+    --main-color: #e11d48;
+    --accent-color: #ea580c;
+    --glass-bg: rgba(255, 255, 255, 0.85);
+    --glass-border: rgba(0, 0, 0, 0.08);
+    --gradient: linear-gradient(135deg, #e11d48, #ea580c);
 }
 
 html {
@@ -124,6 +137,50 @@ section {
     color: var(--main-color);
 }
 
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.theme-toggle {
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    color: var(--text-color);
+    width: 4rem;
+    height: 4rem;
+    border-radius: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.theme-toggle:hover {
+    background: var(--main-color);
+    color: var(--bg-color);
+    transform: rotate(15deg);
+}
+
+.menu-icon {
+    display: none;
+    font-size: 3rem;
+    color: var(--text-color);
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.menu-icon:hover {
+    color: var(--main-color);
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+}
+
 .navbar a {
     font-size: 1.6rem;
     color: var(--text-color);
@@ -131,6 +188,10 @@ section {
     transition: .3s;
     font-weight: 500;
     opacity: 0.8;
+}
+
+.navbar .theme-toggle {
+    margin-left: 3rem;
 }
 
 .navbar a:hover,
@@ -633,6 +694,12 @@ section {
     color: #64748b;
 }
 
+.footer-actions {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
 .footer-iconTop a {
     width: 4.5rem;
     height: 4.5rem;
@@ -651,10 +718,165 @@ section {
     box-shadow: 0 10px 20px rgba(251, 113, 133, 0.3);
 }
 
+/* Contact Section - Direct Cards (Email & WhatsApp) */
+.contact-cards-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 3rem;
+    max-width: 850px;
+    margin: 0 auto;
+}
+
+.contact-card {
+    display: flex;
+    align-items: center;
+    gap: 2.5rem;
+    padding: 3.5rem;
+    border-radius: 2rem;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    color: var(--text-color);
+    text-decoration: none;
+    position: relative;
+    overflow: hidden;
+}
+
+.contact-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    background: var(--gradient);
+    opacity: 0;
+    transition: 0.3s;
+}
+
+.contact-card:hover {
+    transform: translateY(-8px);
+    border-color: var(--main-color);
+    box-shadow: 0 15px 35px rgba(251, 113, 133, 0.2);
+}
+
+.contact-card:hover::before {
+    opacity: 1;
+}
+
+.contact-card-icon {
+    width: 7rem;
+    height: 7rem;
+    border-radius: 2rem;
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3.6rem;
+    color: var(--main-color);
+    flex-shrink: 0;
+    transition: 0.4s;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.contact-card:hover .contact-card-icon {
+    background: var(--gradient);
+    color: var(--bg-color);
+    transform: scale(1.08) rotate(5deg);
+}
+
+.contact-card-info h3 {
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    color: var(--text-color);
+}
+
+.contact-card-info p {
+    font-size: 1.6rem;
+    color: var(--text-muted);
+    margin-bottom: 1rem;
+    word-break: break-word;
+}
+
+.contact-card-action {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: var(--main-color);
+    transition: 0.3s;
+}
+
+.contact-card:hover .contact-card-action {
+    transform: translateX(5px);
+}
+
+@media (max-width: 576px) {
+    .contact-card {
+        flex-direction: column;
+        text-align: center;
+        padding: 3rem 2rem;
+    }
+}
+
+/* Project Metrics Component */
+.project-metrics {
+    display: flex;
+    gap: 2.5rem;
+    margin: 2rem 0;
+    padding: 1.5rem 0;
+    border-top: 1px dashed var(--glass-border);
+    border-bottom: 1px dashed var(--glass-border);
+}
+
+.metric-item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+}
+
+.metric-number {
+    font-size: 2.6rem;
+    font-weight: 800;
+    background: var(--gradient);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+.metric-label {
+    font-size: 1.2rem;
+    color: #94a3b8;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-weight: 600;
+}
+
+/* Accessibility Focus States */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+    outline: 2px solid var(--main-color) !important;
+    outline-offset: 3px;
+}
+
 /* Responsive */
+@media (max-width: 992px) {
+    .contact-wrapper {
+        grid-template-columns: 1fr;
+    }
+}
+
 @media (max-width: 768px) {
+    .menu-icon {
+        display: block;
+    }
+
     .home-content h1 {
-        font-size: 5rem;
+        font-size: 4.8rem;
     }
 
     .heading {
@@ -662,7 +884,44 @@ section {
     }
 
     .navbar {
-        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        padding: 2rem 5%;
+        background: var(--glass-bg);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+        border-bottom: 1px solid var(--glass-border);
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        transform: translateY(-20px);
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+        transition: 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .navbar.active {
+        transform: translateY(0);
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+    }
+
+    .navbar a {
+        margin-left: 0;
+        font-size: 1.8rem;
+    }
+
+    .navbar .theme-toggle {
+        margin-left: 0;
+        align-self: flex-start;
+    }
+
+    .contact-form .input-box {
+        flex-direction: column;
     }
 
     .edu-card {

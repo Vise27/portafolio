@@ -5,9 +5,68 @@ document.body.appendChild(scrollProgress);
 
 window.addEventListener('scroll', () => {
     const totalHeight = document.documentElement.scrollHeight - window.innerHeight;
-    const progress = (window.scrollY / totalHeight) * 100;
+    const progress = totalHeight > 0 ? (window.scrollY / totalHeight) * 100 : 0;
     scrollProgress.style.width = `${progress}%`;
 });
+
+// Mobile Hamburger Menu
+const menuIcon = document.getElementById('menu-icon');
+const navbar = document.getElementById('navbar');
+
+if (menuIcon && navbar) {
+    menuIcon.addEventListener('click', () => {
+        navbar.classList.toggle('active');
+        const icon = menuIcon.querySelector('i');
+        if (navbar.classList.contains('active')) {
+            icon.classList.remove('bx-menu');
+            icon.classList.add('bx-x');
+        } else {
+            icon.classList.remove('bx-x');
+            icon.classList.add('bx-menu');
+        }
+    });
+
+    // Close mobile menu on clicking any navigation link
+    navbar.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+            navbar.classList.remove('active');
+            const icon = menuIcon.querySelector('i');
+            if (icon) {
+                icon.classList.remove('bx-x');
+                icon.classList.add('bx-menu');
+            }
+        });
+    });
+}
+
+// Light / Dark Mode Toggle
+const themeToggle = document.getElementById('theme-toggle');
+const themeIcon = document.getElementById('theme-icon');
+
+const savedTheme = localStorage.getItem('portfolio-theme') || 'dark';
+document.documentElement.setAttribute('data-theme', savedTheme);
+updateThemeIcon(savedTheme);
+
+if (themeToggle) {
+    themeToggle.addEventListener('click', () => {
+        const currentTheme = document.documentElement.getAttribute('data-theme') || 'dark';
+        const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+        document.documentElement.setAttribute('data-theme', newTheme);
+        localStorage.setItem('portfolio-theme', newTheme);
+        updateThemeIcon(newTheme);
+    });
+}
+
+function updateThemeIcon(theme) {
+    if (!themeIcon) return;
+    if (theme === 'light') {
+        themeIcon.classList.remove('bx-sun');
+        themeIcon.classList.add('bx-moon');
+    } else {
+        themeIcon.classList.remove('bx-moon');
+        themeIcon.classList.add('bx-sun');
+    }
+}
 
 // Scroll section active link
 let sections = document.querySelectorAll('section');
@@ -36,10 +95,10 @@ window.addEventListener('scroll', () => {
 
 // Typed JS
 const typed = new Typed('.multiple-text', {
-    strings: ['Software', 'Aplicaciones Móviles', 'Soluciones Digitales', 'Arquitecturas Modernas'],
-    typeSpeed: 70,
-    backSpeed: 50,
-    backDelay: 2000,
+    strings: ['Full Stack', 'Web & Móvil', 'en Odoo ERP', 'Backend Python / Django'],
+    typeSpeed: 60,
+    backSpeed: 40,
+    backDelay: 2200,
     loop: true
 });
 
@@ -88,13 +147,15 @@ style.textContent = `
 `;
 document.head.appendChild(style);
 
-// Modal Functions
+// Modal Functions with Accessibility
 function openModal(modalId) {
     const modal = document.getElementById(modalId);
     if(modal) {
         modal.classList.add('active');
         document.getElementById('modal-overlay').classList.add('active');
         document.body.style.overflow = 'hidden';
+        const closeBtn = modal.querySelector('.close-modal');
+        if (closeBtn) closeBtn.focus();
     }
 }
 
@@ -106,6 +167,21 @@ function closeModal(modalId) {
         document.body.style.overflow = 'auto';
     }
 }
+
+// Close on ESC key for accessibility
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+        document.querySelectorAll('.modal.active').forEach(modal => {
+            modal.classList.remove('active');
+        });
+        const modalOverlay = document.getElementById('modal-overlay');
+        if (modalOverlay) modalOverlay.classList.remove('active');
+        if (imageLightbox && imageLightbox.classList.contains('active')) {
+            closeImageLightbox();
+        }
+        document.body.style.overflow = 'auto';
+    }
+});
 
 const modalOverlay = document.getElementById('modal-overlay');
 if (modalOverlay) {

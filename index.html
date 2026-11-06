@@ -8,10 +8,40 @@
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&family=Inter:wght@300;400;600&display=swap"
+        rel="stylesheet">
     <!-- BoxIcons for icons -->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="styles.css">
+    <meta name="description"
+        content="Marco Vise – Desarrollador de Software enfocado en Django, React, Odoo y PostgreSQL.">
+    <!-- Open Graph -->
+    <meta property="og:title" content="Marco Vise | Portafolio">
+    <meta property="og:description" content="Desarrollador de Software con proyectos en Odoo ERP, Django, React y Flutter.">
+    <meta property="og:image" content="assets/og-image.png">
+    <meta property="og:url" content="https://marcovine.com">
+    <meta property="og:type" content="website">
+
+    <!-- Schema.org Person JSON-LD para SEO -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Marco Vise Sernaque",
+      "url": "https://github.com/Vise27",
+      "jobTitle": "Full Stack Software Developer",
+      "worksFor": {
+        "@type": "Organization",
+        "name": "Freelance / Consultoría"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/in/marco-vise",
+        "https://github.com/Vise27"
+      ],
+      "knowsAbout": ["Odoo ERP", "Python", "Django", "React", "PostgreSQL", "Docker", "Flutter"]
+    }
+    </script>
 </head>
 
 <body>
@@ -25,173 +55,211 @@
     <!-- Header / Navbar -->
     <header class="header">
         <a href="#" class="logo">Marco<span>Vise</span></a>
-        <nav class="navbar">
+        <div class="menu-icon" id="menu-icon" aria-label="Abrir menú">
+            <i class='bx bx-menu'></i>
+        </div>
+        <nav class="navbar" id="navbar">
             <a href="#home" class="active">Inicio</a>
             <a href="#about">Sobre Mí</a>
             <a href="#experience">Experiencia</a>
             <a href="#projects">Proyectos</a>
             <a href="#education">Educación</a>
+            <a href="#skills">Habilidades</a>
             <a href="#contact">Contacto</a>
+            <button class="theme-toggle" id="theme-toggle" aria-label="Cambiar tema">
+                <i class='bx bx-sun' id="theme-icon"></i>
+            </button>
         </nav>
     </header>
 
-    <!-- Hero Section -->
-    <section class="home" id="home">
-        <div class="home-content">
-            <h3>Hola, soy</h3>
-            <h1>Marco Vise Sernaque</h1>
-            <h3>Desarrollador <span class="multiple-text"></span></h3>
-            <p>Desarrollador de Software Full Stack enfocado en crear aplicaciones web y sistemas empresariales. Trabajo principalmente con Django, React, Odoo y PostgreSQL, complementando mis proyectos con Docker, Git, Redis, Celery y AWS.</p>
-            <div class="social-media">
-                <a href="https://www.linkedin.com/in/marco-vise" target="_blank"><i class='bx bxl-linkedin'></i></a>
-                <a href="https://github.com/Vise27" target="_blank"><i class='bx bxl-github'></i></a>
-                <a href="mailto:marco.vise2005@gmail.com"><i class='bx bx-envelope'></i></a>
-                <a href="https://wa.me/51918562387" target="_blank"><i class='bx bxl-whatsapp'></i></a>
-            </div>
-            <div class="home-btns">
-                <a href="#contact" class="btn">Contáctame</a>
-                <a href="#projects" class="btn btn-outline">Ver Proyectos</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- About Section -->
-    <section class="about" id="about">
-        <div class="about-content">
-            <h2 class="heading">Sobre <span>Mí</span></h2>
-            <div class="about-grid">
-                <div class="about-info">
-                    <p>Soy un <strong>Desarrollador de Software Full Stack</strong> interesado en construir soluciones que resuelvan necesidades reales de negocio. He participado en el desarrollo de sistemas empresariales.</p>
-                    <p>Mi experiencia incluye <strong>Odoo, Django, React y PostgreSQL</strong>, además de herramientas como Docker, Git, Redis, Celery y AWS. Me interesa seguir creciendo en el desarrollo backend y frontend, creando aplicaciones mantenibles y preparadas para crecer.</p>
+    <main>
+        <!-- Hero Section -->
+        <section class="home" id="home">
+            <div class="home-content">
+                <h3>Hola, soy</h3>
+                <h1>Marco Vise Sernaque</h1>
+                <h3>Desarrollador <span class="multiple-text"></span></h3>
+                <p>Desarrollador de software enfocado en la creación de aplicaciones web, móviles y sistemas de gestión empresarial. Cuento con experiencia práctica trabajando con <strong>Odoo ERP, Django, React y PostgreSQL</strong>, enfocado en crear soluciones funcionales, código limpio y software preparado para el negocio.
+                </p>
+                <div class="social-media">
+                    <a href="https://www.linkedin.com/in/marco-vise" target="_blank"><i class='bx bxl-linkedin'></i></a>
+                    <a href="https://github.com/Vise27" target="_blank"><i class='bx bxl-github'></i></a>
+                    <a href="mailto:marco.vise2005@gmail.com"><i class='bx bx-envelope'></i></a>
+                    <a href="https://wa.me/51918562387" target="_blank"><i class='bx bxl-whatsapp'></i></a>
+                </div>
+                <div class="home-btns">
+                    <a href="#contact" class="btn">Contáctame</a>
+                    <a href="#projects" class="btn btn-outline">Ver Proyectos</a>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Experience Section (Highlighted) -->
-    <section class="experience" id="experience">
-        <h2 class="heading">Experiencia <span>Profesional</span></h2>
-        <div class="experience-showcase">
-            <!-- Featured Experience -->
-            <div class="exp-card featured">
-                <div class="exp-header">
-                    <div class="exp-title-group">
-                        <h3>OVEMAC</h3>
-                        <h4>Pasante - Desarrollador Mobile CRM</h4>
+        <!-- About Section -->
+        <section class="about" id="about">
+            <div class="about-content">
+                <h2 class="heading">Sobre <span>Mí</span></h2>
+                <div class="about-grid">
+                    <div class="about-info">
+                        <p>Soy un <strong>Desarrollador de Software Full Stack</strong> interesado en construir
+                            soluciones que resuelvan necesidades reales de negocio. He participado en el desarrollo de
+                            sistemas empresariales.</p>
+                        <p>Mi experiencia incluye <strong>Odoo, Django, React y PostgreSQL</strong>, además de
+                            herramientas como Docker, Git, Redis, Celery y AWS. Me interesa seguir creciendo en el
+                            desarrollo backend y frontend, creando aplicaciones mantenibles y preparadas para crecer.
+                        </p>
                     </div>
-                    <span class="exp-date">Enero 2025 – Febrero 2025</span>
-                </div>
-                <div class="exp-body">
-                    <p>Lideré la fase 1 del aplicativo móvil CRM para General Hydraulic Company, optimizando la gestión de inspecciones y presupuestos para maquinaria pesada.</p>
-                    <div class="exp-tags">
-                        <span>Flutter</span>
-                        <span>Firebase</span>
-                        <span>Modular Architecture</span>
-                        <span>Real-time Sync</span>
-                    </div>
-                    <ul class="exp-list">
-                        <li><i class='bx bx-check-circle'></i> Desarrollé una interfaz intuitiva con Flutter reduciendo el tiempo de inducción del personal.</li>
-                        <li><i class='bx bx-check-circle'></i> Implementé sincronización en tiempo real con Firebase para reportes críticos.</li>
-                        <li><i class='bx bx-check-circle'></i> Colaboré en el diseño de un sistema modular escalable para futuras fases.</li>
-                    </ul>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Proyectos Section -->
-    <section class="projects" id="projects">
-        <h2 class="heading">Mis <span>Proyectos</span></h2>
-        <div class="projects-container">
-            <div class="project-box glass">
-                <div class="project-layout">
-                    <div class="project-info">
-                        <div class="project-header">
-                            <h3><i class='bx bx-building-house'></i> Sistema de Gestión Inmobiliaria y CRM</h3>
-                            <span class="project-subtitle">Basado en Odoo ERP | <strong style="color: #4CAF50;">En Producción (Sistema Interno)</strong></span>
+        <!-- Experience Section (Highlighted) -->
+        <section class="experience" id="experience">
+            <h2 class="heading">Experiencia <span>Profesional</span></h2>
+            <div class="experience-showcase">
+                <!-- Featured Experience -->
+                <div class="exp-card featured">
+                    <div class="exp-header">
+                        <div class="exp-title-group">
+                            <h3>OVEMAC</h3>
+                            <h4>Pasante - Desarrollador Mobile CRM</h4>
                         </div>
-                        <p class="project-desc">Desarrollo e implementación de un módulo personalizado integrado nativamente con el CRM de Odoo para centralizar la gestión de propiedades, propietarios y el flujo de ventas.</p>
-                        <button class="btn btn-small" onclick="openModal('modal-inmobiliaria')">Detalles del Proyecto</button>
+                        <span class="exp-date">Enero 2025 – Febrero 2025</span>
                     </div>
-                    <div class="project-image">
-                        <img src="assets/odoo_1.png" alt="Sistema Inmobiliario Odoo CRM" style="border-radius: 2rem; box-shadow: 0 10px 30px rgba(0,0,0,0.5); width: 100%;">
+                    <div class="exp-body">
+                        <p>Participé en la fase inicial del aplicativo móvil CRM para General Hydraulic Company, analizando los flujos operativos de la empresa para traducirlos en prototipos de diseño y las primeras interfaces funcionales.</p>
+                        <div class="exp-tags">
+                            <span>Flutter</span>
+                            <span>Firebase</span>
+                            <span>Figma</span>
+                            <span>Modelado de Datos</span>
+                        </div>
+                        <ul class="exp-list">
+                            <li><i class='bx bx-check-circle'></i> Relevé y analicé los flujos de inspección y cotizaciones para plasmar la experiencia en prototipos de Figma.</li>
+                            <li><i class='bx bx-check-circle'></i> Desarrollé las pantallas base y componentes iniciales de la aplicación móvil utilizando Flutter.</li>
+                            <li><i class='bx bx-check-circle'></i> Diseñé la estructura y colecciones en Firebase Firestore para la gestión de datos en tiempo real.</li>
+                            <li><i class='bx bx-check-circle'></i> Documenté la base del proyecto para facilitar la continuidad y escalabilidad con los siguientes equipos.</li>
+                        </ul>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Education Section -->
-    <section class="education" id="education">
-        <h2 class="heading">Mi <span>Educación</span></h2>
-        <div class="education-container">
-            <div class="edu-card">
-                <div class="edu-icon"><i class='bx bxs-graduation'></i></div>
-                <div class="edu-info">
-                    <h3>Diseño y Desarrollo de Software</h3>
-                    <h4>TECSUP</h4>
-                    <span class="edu-date">2023 – 2025</span>
-                    <p>Formación técnica especializada en la creación de soluciones tecnológicas robustas y modernas.</p>
+        <!-- Proyectos Section -->
+        <section class="projects" id="projects">
+            <h2 class="heading">Mis <span>Proyectos</span></h2>
+            <div class="projects-container">
+                <div class="project-box glass">
+                    <div class="project-layout">
+                        <div class="project-info">
+                            <div class="project-header">
+                                <h3><i class='bx bx-building-house'></i> Sistema de Gestión Inmobiliaria y CRM</h3>
+                                <span class="project-subtitle">Basado en Odoo ERP | <strong style="color: #4CAF50;">En
+                                        Producción (Sistema Interno)</strong></span>
+                            </div>
+                            <p class="project-desc">Desarrollo e implementación de un módulo personalizado integrado
+                                nativamente con el CRM de Odoo para centralizar la gestión de propiedades, propietarios
+                                y el flujo de ventas.</p>
+                            <div class="project-techs">
+                                <span>Odoo ERP</span>
+                                <span>Python</span>
+                                <span>PostgreSQL</span>
+                                <span>XML Views</span>
+                                <span>JavaScript</span>
+                            </div>
+                            <button class="btn btn-small" onclick="openModal('modal-inmobiliaria')">Detalles del
+                                Proyecto</button>
+                        </div>
+                        <div class="project-image">
+                            <img src="assets/odoo_1.png" alt="Sistema Inmobiliario Odoo CRM" loading="lazy"
+                                style="border-radius: 2rem; box-shadow: 0 10px 30px rgba(0,0,0,0.5); width: 100%;">
+                        </div>
+                    </div>
                 </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- Skills Section -->
-    <section class="skills" id="skills">
-        <h2 class="heading">Mis <span>Habilidades</span></h2>
-        <div class="skills-grid">
-            <div class="skill-category">
-                <h3><i class='bx bx-mobile-alt'></i> Frontend & Mobile</h3>
-                <div class="skill-tags">
-                    <span>Flutter</span>
-                    <span>Dart</span>
-                    <span>JavaScript</span>
-                    <span>XML / HTML5</span>
-                </div>
-            </div>
-            <div class="skill-category">
-                <h3><i class='bx bx-server'></i> Backend & DB</h3>
-                <div class="skill-tags">
-                    <span>Python (Odoo/Django)</span>
-                    <span>Spring Boot</span>
-                    <span>Laravel</span>
-                    <span>PostgreSQL / Firebase</span>
-                </div>
-            </div>
-            <div class="skill-category">
-                <h3><i class='bx bx-wrench'></i> Herramientas & Infra</h3>
-                <div class="skill-tags">
-                    <span>Docker</span>
-                    <span>Git / GitHub</span>
-                    <span>Linux</span>
-                    <span>Postman / REST</span>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- Contacto Section -->
-    <section class="contact" id="contact">
-        <h2 class="heading">¿Hablamos? <span>Contacto</span></h2>
-        <div class="contact-details">
-            <div class="contact-item glass">
-                <i class='bx bx-current-location'></i>
-                <h3>Ubicación</h3>
-                <p>Sechura - Piura, Perú</p>
             </div>
-            <div class="contact-item glass">
-                <i class='bx bx-envelope'></i>
-                <h3>Email</h3>
-                <p><a href="mailto:marco.vise2005@gmail.com">marco.vise2005@gmail.com</a></p>
+        </section>
+
+        <!-- Education Section -->
+        <section class="education" id="education">
+            <h2 class="heading">Mi <span>Educación</span></h2>
+            <div class="education-container">
+                <div class="edu-card">
+                    <div class="edu-icon"><i class='bx bxs-graduation'></i></div>
+                    <div class="edu-info">
+                        <h3>Diseño y Desarrollo de Software</h3>
+                        <h4>TECSUP</h4>
+                        <span class="edu-date">2023 – 2025</span>
+                        <p>Formación técnica especializada en la creación de soluciones tecnológicas robustas y
+                            modernas.</p>
+                    </div>
+                </div>
             </div>
-            <div class="contact-item glass">
-                <i class='bx bx-phone'></i>
-                <h3>Teléfono</h3>
-                <p>+51 918 562 387</p>
+        </section>
+
+        <!-- Skills Section -->
+        <section class="skills" id="skills">
+            <h2 class="heading">Mis <span>Habilidades</span></h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3><i class='bx bx-mobile-alt'></i> Frontend & Mobile</h3>
+                    <div class="skill-tags">
+                        <span>Flutter</span>
+                        <span>Dart</span>
+                        <span>JavaScript</span>
+                        <span>XML / HTML5</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3><i class='bx bx-server'></i> Backend & DB</h3>
+                    <div class="skill-tags">
+                        <span>Python (Odoo/Django)</span>
+                        <span>Spring Boot</span>
+                        <span>Laravel</span>
+                        <span>PostgreSQL / Firebase</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3><i class='bx bx-wrench'></i> Herramientas & Infra</h3>
+                    <div class="skill-tags">
+                        <span>Docker</span>
+                        <span>Git / GitHub</span>
+                        <span>Linux</span>
+                        <span>Postman / REST</span>
+                    </div>
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
+
+        <!-- Contacto Section -->
+        <section class="contact" id="contact">
+            <h2 class="heading">¿Hablamos? <span>Contacto</span></h2>
+
+            <div class="contact-cards-container">
+                <a href="mailto:marco.vise2005@gmail.com" class="contact-card glass">
+                    <div class="contact-card-icon">
+                        <i class='bx bx-envelope'></i>
+                    </div>
+                    <div class="contact-card-info">
+                        <h3>Email</h3>
+                        <p>marco.vise2005@gmail.com</p>
+                        <span class="contact-card-action">Enviar correo <i class='bx bx-right-arrow-alt'></i></span>
+                    </div>
+                </a>
+
+                <a href="https://wa.me/51918562387" target="_blank" class="contact-card glass">
+                    <div class="contact-card-icon">
+                        <i class='bx bxl-whatsapp'></i>
+                    </div>
+                    <div class="contact-card-info">
+                        <h3>WhatsApp</h3>
+                        <p>+51 918 562 387</p>
+                        <span class="contact-card-action">Escribir por chat <i class='bx bx-right-arrow-alt'></i></span>
+                    </div>
+                </a>
+            </div>
+        </section>
+    </main>
 
     <!-- Footer -->
     <footer class="footer">
@@ -207,23 +275,33 @@
     <div class="modal-overlay" id="modal-overlay"></div>
 
     <!-- Modal Inmobiliaria -->
-    <div class="modal glass" id="modal-inmobiliaria">
-        <button class="close-modal" onclick="closeModal('modal-inmobiliaria')"><i class='bx bx-x'></i></button>
+    <div class="modal glass" id="modal-inmobiliaria" role="dialog" aria-modal="true" aria-labelledby="modal-inmo-title">
+        <button class="close-modal" onclick="closeModal('modal-inmobiliaria')" aria-label="Cerrar ventana"><i
+                class='bx bx-x'></i></button>
         <div class="modal-scroll">
-            <h3><i class='bx bx-building-house'></i> Sistema de Gestión Inmobiliaria y CRM</h3>
-            <p class="modal-date">Desarrollado en Odoo ERP | <strong style="color: #4CAF50;">En Producción (Sistema Interno)</strong></p>
-            
+            <h3 id="modal-inmo-title"><i class='bx bx-building-house'></i> Sistema de Gestión Inmobiliaria y CRM</h3>
+            <p class="modal-date">Desarrollado en Odoo ERP | <strong style="color: #4CAF50;">En Producción (Sistema
+                    Interno)</strong></p>
+
             <div class="modal-body">
-                <p style="font-size: 1.6rem; color: #cbd5e1; margin-bottom: 2rem; line-height: 1.7;">Desarrollo e implementación de un módulo personalizado, sobre el ecosistema ERP de Odoo. Este sistema interno centraliza y optimiza la gestión integral de propiedades, propietarios y el flujo de ventas/alquileres, integrándose de forma nativa con el módulo de CRM.</p>
-                
+                <p style="font-size: 1.6rem; color: #cbd5e1; margin-bottom: 2rem; line-height: 1.7;">Desarrollo e
+                    implementación de un módulo personalizado sobre el ecosistema ERP de Odoo. Este sistema interno
+                    centraliza y optimiza la gestión integral de propiedades, propietarios y el flujo de
+                    ventas/alquileres, integrándose de forma nativa con el módulo de CRM.</p>
+
                 <div class="modal-section">
                     <h4><i class='bx bx-star'></i> Funcionalidades Clave</h4>
                     <ul>
-                        <li><strong>Gestión de Propiedades:</strong> Registro completo (área, linderos, ubicación, disponibilidad).</li>
-                        <li><strong>Manejo Multimoneda:</strong> Conversión dinámica USD/Local en tiempo real para precios y comisiones.</li>
-                        <li><strong>Integración CRM:</strong> Conexión directa entre propiedades y pipeline de ventas (Leads automáticos).</li>
-                        <li><strong>Gestión de Propietarios:</strong> Historial y sincronización inteligente con oportunidades en curso.</li>
-                        <li><strong>UI/UX Personalizada:</strong> Módulos para vistas fluidas con componentes y diálogos personalizados.</li>
+                        <li><strong>Gestión de Propiedades:</strong> Registro completo (área, linderos, ubicación,
+                            disponibilidad).</li>
+                        <li><strong>Manejo Multimoneda:</strong> Conversión dinámica USD/Local en tiempo real para
+                            precios y comisiones.</li>
+                        <li><strong>Integración CRM:</strong> Conexión directa entre propiedades y pipeline de ventas
+                            (Leads automáticos).</li>
+                        <li><strong>Gestión de Propietarios:</strong> Historial y sincronización inteligente con
+                            oportunidades en curso.</li>
+                        <li><strong>UI/UX Personalizada:</strong> Módulos para vistas fluidas con componentes y diálogos
+                            personalizados.</li>
                     </ul>
                 </div>
 
@@ -238,11 +316,14 @@
                 </div>
 
                 <div class="modal-gallery">
-                    <img src="assets/odoo_1.png" alt="Pipeline CRM" title="Pipeline CRM Odoo">
-                    <img src="assets/odoo_2.png" alt="Detalle de Propiedad y Actividades" title="Vista de Propiedad con Barra de Actividades">
-                    <img src="assets/odoo_3.png" alt="Actividades Kanban" title="Gestión de Actividades en Kanban">
-                    <img src="assets/odoo_4.png" alt="Historial de Actividades" title="Historial detallado">
-                    <img src="assets/odoo_5.png" alt="Leads CRM" title="Gestión de Interesados y Leads">
+                    <img src="assets/odoo_1.png" alt="Pipeline CRM" title="Pipeline CRM Odoo" loading="lazy">
+                    <img src="assets/odoo_2.png" alt="Detalle de Propiedad y Actividades"
+                        title="Vista de Propiedad con Barra de Actividades" loading="lazy">
+                    <img src="assets/odoo_3.png" alt="Actividades Kanban" title="Gestión de Actividades en Kanban"
+                        loading="lazy">
+                    <img src="assets/odoo_4.png" alt="Historial de Actividades" title="Historial detallado"
+                        loading="lazy">
+                    <img src="assets/odoo_5.png" alt="Leads CRM" title="Gestión de Interesados y Leads" loading="lazy">
                 </div>
             </div>
         </div>
@@ -259,4 +340,5 @@
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
     <script src="script.js"></script>
 </body>
+
 </html>
