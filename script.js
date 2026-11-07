@@ -68,6 +68,92 @@ function updateThemeIcon(theme) {
     }
 }
 
+// About Section Carousel (Infinite Loop)
+const carouselTrack = document.querySelector('.carousel-track');
+const carouselSlides = document.querySelectorAll('.carousel-slide');
+const prevBtn = document.getElementById('carousel-prev');
+const nextBtn = document.getElementById('carousel-next');
+const dotsContainer = document.getElementById('carousel-dots');
+
+if (carouselSlides.length > 0 && dotsContainer) {
+    let currentIndex = 0;
+    let carouselInterval;
+
+    // Create indicators/dots
+    carouselSlides.forEach((_, idx) => {
+        const dot = document.createElement('span');
+        dot.classList.add('carousel-dot');
+        if (idx === 0) dot.classList.add('active');
+        dot.addEventListener('click', () => {
+            goToSlide(idx);
+            resetAutoplay();
+        });
+        dotsContainer.appendChild(dot);
+    });
+
+    const dots = dotsContainer.querySelectorAll('.carousel-dot');
+
+    function updateCarousel() {
+        carouselSlides.forEach((slide, idx) => {
+            slide.classList.remove('active', 'slide-out-left');
+            if (idx === currentIndex) {
+                slide.classList.add('active');
+            }
+        });
+
+        dots.forEach((dot, idx) => {
+            dot.classList.toggle('active', idx === currentIndex);
+        });
+    }
+
+    function nextSlide() {
+        currentIndex = (currentIndex + 1) % carouselSlides.length;
+        updateCarousel();
+    }
+
+    function prevSlide() {
+        currentIndex = (currentIndex - 1 + carouselSlides.length) % carouselSlides.length;
+        updateCarousel();
+    }
+
+    function goToSlide(index) {
+        currentIndex = index;
+        updateCarousel();
+    }
+
+    function startAutoplay() {
+        carouselInterval = setInterval(nextSlide, 4500); // changes every 4.5 seconds
+    }
+
+    function resetAutoplay() {
+        clearInterval(carouselInterval);
+        startAutoplay();
+    }
+
+    if (nextBtn) {
+        nextBtn.addEventListener('click', () => {
+            nextSlide();
+            resetAutoplay();
+        });
+    }
+
+    if (prevBtn) {
+        prevBtn.addEventListener('click', () => {
+            prevSlide();
+            resetAutoplay();
+        });
+    }
+
+    // Pause autoplay on hover so the user can comfortably read
+    const carouselWrapper = document.querySelector('.about-carousel-wrapper');
+    if (carouselWrapper) {
+        carouselWrapper.addEventListener('mouseenter', () => clearInterval(carouselInterval));
+        carouselWrapper.addEventListener('mouseleave', startAutoplay);
+    }
+
+    startAutoplay();
+}
+
 // Scroll section active link
 let sections = document.querySelectorAll('section');
 let navLinks = document.querySelectorAll('header nav a');

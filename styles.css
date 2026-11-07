@@ -19,27 +19,27 @@ h4,
 }
 
 :root {
-    --bg-color: #18181b;
-    --second-bg-color: #27272a;
+    --bg-color: #0b0d11;
+    --second-bg-color: #131720;
     --text-color: #f8fafc;
     --text-muted: #94a3b8;
-    --main-color: #fb7185;
-    --accent-color: #fb923c;
-    --glass-bg: rgba(24, 24, 27, 0.8);
-    --glass-border: rgba(255, 255, 255, 0.1);
-    --gradient: linear-gradient(135deg, var(--main-color), var(--accent-color));
+    --main-color: #f43f5e;
+    --accent-color: #fb7185;
+    --glass-bg: rgba(15, 18, 26, 0.75);
+    --glass-border: rgba(255, 255, 255, 0.08);
+    --gradient: linear-gradient(135deg, #e11d48, #f43f5e 50%, #fb7185);
 }
 
 [data-theme="light"] {
-    --bg-color: #f8fafc;
-    --second-bg-color: #f1f5f9;
-    --text-color: #0f172a;
-    --text-muted: #64748b;
+    --bg-color: #fafaf9;
+    --second-bg-color: #f5f5f4;
+    --text-color: #0c0a09;
+    --text-muted: #57534e;
     --main-color: #e11d48;
-    --accent-color: #ea580c;
+    --accent-color: #be123c;
     --glass-bg: rgba(255, 255, 255, 0.85);
     --glass-border: rgba(0, 0, 0, 0.08);
-    --gradient: linear-gradient(135deg, #e11d48, #ea580c);
+    --gradient: linear-gradient(135deg, #be123c, #e11d48);
 }
 
 html {
@@ -73,29 +73,29 @@ section {
     width: 500px;
     height: 500px;
     background: var(--main-color);
-    filter: blur(80px);
+    filter: blur(100px);
     border-radius: 50%;
-    opacity: 0.1;
+    opacity: 0.12;
     animation: move 20s infinite alternate;
 }
 
 .blob-1 {
     top: -10%;
     left: -10%;
-    background: var(--main-color);
+    background: #e11d48;
 }
 
 .blob-2 {
     bottom: -10%;
     right: -10%;
-    background: var(--accent-color);
+    background: #9f1239;
     animation-delay: -5s;
 }
 
 .blob-3 {
     top: 40%;
     left: 50%;
-    background: #a855f7;
+    background: #be123c;
     animation-delay: -10s;
 }
 
@@ -330,22 +330,215 @@ section {
 /* About Section */
 .about {
     background: transparent;
+    padding: 10rem 9% 6rem;
 }
 
 .about-content {
-    max-width: 1000px;
+    max-width: 1100px;
     margin: 0 auto;
 }
 
+.about-grid {
+    display: grid;
+    grid-template-columns: 1.15fr 1fr;
+    gap: 4rem;
+    align-items: stretch;
+}
+
+.about-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
 .about-info p {
-    font-size: 1.8rem;
+    font-size: 1.7rem;
     line-height: 1.8;
-    color: #94a3b8;
+    color: var(--text-muted);
     margin-bottom: 2rem;
 }
 
 .about-info strong {
     color: var(--main-color);
+}
+
+.about-cta {
+    display: flex;
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.btn-small {
+    padding: 1rem 2.2rem;
+    font-size: 1.4rem;
+}
+
+/* Bento Carousel (Right Column) */
+.about-carousel-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.carousel-container {
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+}
+
+.carousel-track {
+    position: relative;
+    width: 100%;
+    min-height: 260px;
+    display: flex;
+    align-items: stretch;
+}
+
+.carousel-slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateX(30px) scale(0.96);
+    transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+    pointer-events: none;
+    display: flex;
+}
+
+.carousel-slide.active {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(0) scale(1);
+    pointer-events: auto;
+    position: relative;
+}
+
+.bento-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    padding: 3.5rem 3.5rem;
+    border-radius: 2.2rem;
+    transition: 0.3s ease;
+    border: 1px solid var(--glass-border);
+    background: var(--glass-bg);
+}
+
+[data-theme="light"] .bento-card {
+    background: #ffffff;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+}
+
+.bento-card:hover {
+    border-color: var(--main-color);
+    box-shadow: 0 12px 30px rgba(251, 113, 133, 0.2);
+}
+
+.bento-text h4 {
+    font-size: 2.2rem;
+    color: var(--text-color);
+    margin-bottom: 1.2rem;
+    font-weight: 700;
+}
+
+.bento-text p {
+    font-size: 1.6rem;
+    line-height: 1.8;
+    color: var(--text-muted);
+    margin-bottom: 0;
+}
+
+.bento-text strong {
+    color: var(--main-color);
+}
+
+/* Side Carousel Controls */
+.carousel-btn {
+    width: 4.2rem;
+    height: 4.2rem;
+    border-radius: 50%;
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    color: var(--text-color);
+    font-size: 2.4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    flex-shrink: 0;
+    transition: 0.3s ease;
+    z-index: 5;
+}
+
+[data-theme="light"] .carousel-btn {
+    background: #ffffff;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.carousel-btn:hover {
+    background: var(--main-color);
+    color: var(--bg-color);
+    transform: scale(1.1);
+}
+
+.carousel-indicators {
+    display: flex;
+    gap: 0.8rem;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+.carousel-dot {
+    width: 0.9rem;
+    height: 0.9rem;
+    border-radius: 5rem;
+    background: var(--glass-border);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.carousel-dot.active {
+    width: 2.8rem;
+    background: var(--gradient);
+}
+
+@media (max-width: 992px) {
+    .about-grid {
+        grid-template-columns: 1fr;
+        gap: 4rem;
+    }
+
+    .carousel-track {
+        min-height: 220px;
+    }
+}
+
+@media (max-width: 576px) {
+    .carousel-container {
+        gap: 0.5rem;
+    }
+
+    .carousel-btn {
+        width: 3.4rem;
+        height: 3.4rem;
+        font-size: 1.8rem;
+    }
+
+    .bento-card {
+        padding: 2.5rem 2rem;
+    }
 }
 
 /* Experience Section (Highlighted) */
@@ -559,10 +752,40 @@ section {
 .skill-tags span {
     padding: 0.8rem 1.6rem;
     background: rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--glass-border);
     border-radius: 1rem;
     font-size: 1.4rem;
-    color: #cbd5e1;
+    color: var(--text-color);
     font-weight: 500;
+}
+
+[data-theme="light"] .skill-tags span {
+    background: rgba(0, 0, 0, 0.04);
+    border-color: rgba(0, 0, 0, 0.1);
+    color: var(--text-color);
+}
+
+[data-theme="light"] .exp-tags span {
+    background: rgba(0, 0, 0, 0.04);
+    border-color: rgba(0, 0, 0, 0.1);
+    color: var(--text-color);
+}
+
+[data-theme="light"] .project-techs span {
+    background: rgba(225, 29, 72, 0.08);
+    border-color: rgba(225, 29, 72, 0.2);
+    color: var(--main-color);
+}
+
+[data-theme="light"] .modal {
+    background: #ffffff;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+}
+
+[data-theme="light"] .close-modal {
+    background: #ffffff;
+    color: #0f172a;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
 /* Projects Section */
@@ -1012,20 +1235,44 @@ textarea:focus-visible {
     margin-bottom: 1rem;
 }
 
+.modal-date {
+    font-size: 1.4rem;
+    color: var(--text-muted);
+    margin-bottom: 2rem;
+}
+
+.modal-desc {
+    font-size: 1.6rem;
+    color: var(--text-color);
+    line-height: 1.8;
+    margin-bottom: 2rem;
+    opacity: 0.9;
+}
+
 .modal-section h4 {
     font-size: 2rem;
     margin: 2.5rem 0 1.5rem;
     display: flex;
     align-items: center;
     gap: 1rem;
+    color: var(--text-color);
+}
+
+.modal-section ul {
+    list-style: none;
 }
 
 .modal-section ul li {
-    font-size: 1.6rem;
-    color: #94a3b8;
-    margin-bottom: 1rem;
-    padding-left: 2.5rem;
+    font-size: 1.5rem;
+    color: var(--text-muted);
+    margin-bottom: 1.2rem;
+    padding-left: 2rem;
     position: relative;
+    line-height: 1.6;
+}
+
+.modal-section ul li strong {
+    color: var(--text-color);
 }
 
 .modal-section ul li::before {
