@@ -137,7 +137,8 @@ section {
     color: var(--main-color);
 }
 
-.header-actions {
+.header-actions,
+.header-right {
     display: flex;
     align-items: center;
     gap: 1.5rem;
@@ -188,10 +189,6 @@ section {
     transition: .3s;
     font-weight: 500;
     opacity: 0.8;
-}
-
-.navbar .theme-toggle {
-    margin-left: 3rem;
 }
 
 .navbar a:hover,
@@ -1136,11 +1133,6 @@ textarea:focus-visible {
     .navbar a {
         margin-left: 0;
         font-size: 1.8rem;
-    }
-
-    .navbar .theme-toggle {
-        margin-left: 0;
-        align-self: flex-start;
     }
 
     .contact-form .input-box {

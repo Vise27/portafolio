@@ -39,13 +39,19 @@ if (menuIcon && navbar) {
     });
 }
 
-// Light / Dark Mode Toggle
+// Light / Dark Mode Toggle with System Preference Detection
 const themeToggle = document.getElementById('theme-toggle');
 const themeIcon = document.getElementById('theme-icon');
 
-const savedTheme = localStorage.getItem('portfolio-theme') || 'dark';
-document.documentElement.setAttribute('data-theme', savedTheme);
-updateThemeIcon(savedTheme);
+// Detect user's OS preference (Dark or Light)
+const getSystemTheme = () => window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+
+// Use saved preference if available, otherwise default to OS setting
+const savedTheme = localStorage.getItem('portfolio-theme');
+const initialTheme = savedTheme || getSystemTheme();
+
+document.documentElement.setAttribute('data-theme', initialTheme);
+updateThemeIcon(initialTheme);
 
 if (themeToggle) {
     themeToggle.addEventListener('click', () => {
@@ -56,6 +62,15 @@ if (themeToggle) {
         updateThemeIcon(newTheme);
     });
 }
+
+// Listen for system theme changes in real-time (if the user hasn't set a manual override)
+window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
+    if (!localStorage.getItem('portfolio-theme')) {
+        const systemTheme = e.matches ? 'dark' : 'light';
+        document.documentElement.setAttribute('data-theme', systemTheme);
+        updateThemeIcon(systemTheme);
+    }
+});
 
 function updateThemeIcon(theme) {
     if (!themeIcon) return;
