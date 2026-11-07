@@ -13,6 +13,8 @@
         rel="stylesheet">
     <!-- BoxIcons for icons -->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <!-- Devicon Icons for Tech Stack -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
     <link rel="stylesheet" href="styles.css">
     <meta name="description"
         content="Marco Vise – Desarrollador de Software enfocado en Django, React, Odoo y PostgreSQL.">
@@ -255,15 +257,67 @@
         <!-- Education Section -->
         <section class="education" id="education">
             <h2 class="heading">Mi <span>Educación</span></h2>
-            <div class="education-container">
-                <div class="edu-card">
-                    <div class="edu-icon"><i class='bx bxs-graduation'></i></div>
-                    <div class="edu-info">
-                        <h3>Diseño y Desarrollo de Software</h3>
-                        <h4>TECSUP</h4>
-                        <span class="edu-date">2023 – 2025</span>
-                        <p>Formación técnica especializada en la creación de soluciones tecnológicas robustas y
-                            modernas.</p>
+            <div class="education-layout">
+                <!-- Tarjeta Principal: TECSUP -->
+                <div class="edu-card main-edu glass">
+                    <div class="edu-card-top">
+                        <div class="edu-icon"><i class='bx bxs-graduation'></i></div>
+                        <div class="edu-title-group">
+                            <span class="edu-badge">Carrera Profesional Técnica</span>
+                            <h3>Diseño y Desarrollo de Software</h3>
+                            <h4>TECSUP</h4>
+                            <span class="edu-date"><i class='bx bx-calendar'></i> 2023 – 2025</span>
+                        </div>
+                    </div>
+                    
+                    <p class="edu-description">Formación intensiva de 3 años orientada a la ingeniería de software, arquitectura de sistemas y desarrollo de aplicaciones empresariales escalables.</p>
+                    
+                    <div class="edu-competencies">
+                        <h5>Áreas y Competencias Clave:</h5>
+                        <div class="edu-tags-grid">
+                            <span><i class='bx bx-check'></i> Estructuras de Datos y Algoritmos</span>
+                            <span><i class='bx bx-check'></i> Modelado de Bases de Datos Relacionales</span>
+                            <span><i class='bx bx-check'></i> Arquitectura y Patrones de Software</span>
+                            <span><i class='bx bx-check'></i> Desarrollo Web y Móvil Empresarial</span>
+                            <span><i class='bx bx-check'></i> Metodologías Ágiles (Scrum)</span>
+                            <span><i class='bx bx-check'></i> Calidad y Pruebas de Software</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Columna Secundaria: Certificación & Formación Continua -->
+                <div class="edu-side-column">
+                    <!-- Tarjeta Certificación Cisco -->
+                    <div class="cert-compact-card glass">
+                        <div class="cert-compact-header">
+                            <div class="cert-mini-icon"><i class='bx bx-line-chart'></i></div>
+                            <div class="cert-compact-titles">
+                                <span class="cert-mini-badge">Certificación Oficial</span>
+                                <h4>Aspectos Básicos de Análisis de Datos</h4>
+                                <span class="cert-issuer">Cisco Networking Academy · Credly</span>
+                            </div>
+                        </div>
+
+                        <p class="cert-compact-desc">Transformación, análisis y consulta de bases de datos relacionales con SQL, hojas de cálculo avanzadas (Excel) y visualización estratégica con Tableau.</p>
+
+                        <div class="cert-skills-pills">
+                            <span>SQL Relacional</span>
+                            <span>Excel</span>
+                            <span>Tableau</span>
+                        </div>
+
+                        <a href="https://www.credly.com/badges/a5c95fa0-5006-4a7c-921c-5ffc0ddec4bc/public_url" target="_blank" class="cert-link-btn">
+                            Ver Credencial Oficial <i class='bx bx-link-external'></i>
+                        </a>
+                    </div>
+
+                    <!-- Mini Tarjeta de Aprendizaje Autodidacta -->
+                    <div class="edu-route-card glass">
+                        <div class="route-header">
+                            <i class='bx bx-book-reader'></i>
+                            <h5>Autoaprendizaje Técnico</h5>
+                        </div>
+                        <p>Especialización práctica en arquitecturas backend con <strong>Python / Django</strong> y desarrollo modular en el ecosistema <strong>Odoo ERP</strong>.</p>
                     </div>
                 </div>
             </div>
@@ -273,31 +327,105 @@
         <section class="skills" id="skills">
             <h2 class="heading">Mis <span>Habilidades</span></h2>
             <div class="skills-grid">
-                <div class="skill-category">
-                    <h3><i class='bx bx-mobile-alt'></i> Frontend & Mobile</h3>
-                    <div class="skill-tags">
-                        <span>Flutter</span>
-                        <span>Dart</span>
-                        <span>JavaScript</span>
-                        <span>XML / HTML5</span>
+                <!-- Categoría 1: Sistemas & Backend -->
+                <div class="skill-category glass">
+                    <div class="skill-category-header">
+                        <i class='bx bx-server'></i>
+                        <h3>Sistemas & Backend</h3>
+                    </div>
+                    <div class="tech-items-grid">
+                        <div class="tech-pill">
+                            <i class="devicon-python-plain colored"></i>
+                            <span>Python</span>
+                        </div>
+                        <div class="tech-pill">
+                            <i class="devicon-django-plain colored"></i>
+                            <span>Django</span>
+                        </div>
+                        <div class="tech-pill">
+                            <i class='bx bx-briefcase-alt-2 tech-custom-icon odoo-icon'></i>
+                            <span>Odoo ERP</span>
+                        </div>
+                        <div class="tech-pill">
+                            <i class="devicon-postgresql-plain colored"></i>
+                            <span>PostgreSQL</span>
+                        </div>
+                        <div class="tech-pill">
+                            <i class='bx bx-transfer tech-custom-icon'></i>
+                            <span>REST APIs</span>
+                        </div>
+                        <div class="tech-pill">
+                            <i class="devicon-firebase-plain colored"></i>
+                            <span>Firebase</span>
+                        </div>
                     </div>
                 </div>
-                <div class="skill-category">
-                    <h3><i class='bx bx-server'></i> Backend & DB</h3>
-                    <div class="skill-tags">
-                        <span>Python (Odoo/Django)</span>
-                        <span>Spring Boot</span>
-                        <span>Laravel</span>
-                        <span>PostgreSQL / Firebase</span>
+
+                <!-- Categoría 2: Desarrollo Móvil & Web -->
+                <div class="skill-category glass">
+                    <div class="skill-category-header">
+                        <i class='bx bx-devices'></i>
+                        <h3>Desarrollo Móvil & Web</h3>
+                    </div>
+                    <div class="tech-items-grid">
+                        <div class="tech-pill">
+                            <i class="devicon-flutter-plain colored"></i>
+                            <span>Flutter</span>
+                        </div>
+                        <div class="tech-pill">
+                            <i class="devicon-dart-plain colored"></i>
+                            <span>Dart</span>
+                        </div>
+                        <div class="tech-pill">
+                            <i class="devicon-react-original colored"></i>
+                            <span>React</span>
+                        </div>
+                        <div class="tech-pill">
+                            <i class="devicon-javascript-plain colored"></i>
+                            <span>JavaScript</span>
+                        </div>
+                        <div class="tech-pill">
+                            <i class="devicon-html5-plain colored"></i>
+                            <span>HTML5 / CSS3</span>
+                        </div>
+                        <div class="tech-pill">
+                            <i class="devicon-figma-plain colored"></i>
+                            <span>Figma (UI/UX)</span>
+                        </div>
                     </div>
                 </div>
-                <div class="skill-category">
-                    <h3><i class='bx bx-wrench'></i> Herramientas & Infra</h3>
-                    <div class="skill-tags">
-                        <span>Docker</span>
-                        <span>Git / GitHub</span>
-                        <span>Linux</span>
-                        <span>Postman / REST</span>
+
+                <!-- Categoría 3: Entorno & Despliegue -->
+                <div class="skill-category glass">
+                    <div class="skill-category-header">
+                        <i class='bx bx-terminal'></i>
+                        <h3>Entorno & Despliegue</h3>
+                    </div>
+                    <div class="tech-items-grid">
+                        <div class="tech-pill">
+                            <i class="devicon-docker-plain colored"></i>
+                            <span>Docker</span>
+                        </div>
+                        <div class="tech-pill">
+                            <i class="devicon-git-plain colored"></i>
+                            <span>Git</span>
+                        </div>
+                        <div class="tech-pill">
+                            <i class="devicon-github-original"></i>
+                            <span>GitHub</span>
+                        </div>
+                        <div class="tech-pill">
+                            <i class='bx bx-git-branch tech-custom-icon'></i>
+                            <span>Git Flow</span>
+                        </div>
+                        <div class="tech-pill">
+                            <i class="devicon-postman-plain colored"></i>
+                            <span>Postman</span>
+                        </div>
+                        <div class="tech-pill">
+                            <i class="devicon-vscode-plain colored"></i>
+                            <span>VS Code</span>
+                        </div>
                     </div>
                 </div>
             </div>
