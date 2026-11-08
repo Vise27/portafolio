@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" data-theme="dark">
 
 <head>
     <meta charset="UTF-8">
@@ -16,6 +16,14 @@
     <!-- Devicon Icons for Tech Stack -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
     <link rel="stylesheet" href="styles.css">
+    <!-- Theme init: runs BEFORE paint to avoid flash of wrong theme -->
+    <script>
+        (function () {
+            var saved = localStorage.getItem('portfolio-theme');
+            var sys = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+            document.documentElement.setAttribute('data-theme', saved || sys);
+        })();
+    </script>
     <meta name="description"
         content="Marco Vise – Desarrollador de Software enfocado en Django, React, Odoo y PostgreSQL.">
     <!-- Open Graph -->
