@@ -1333,13 +1333,76 @@ section {
     box-shadow: 0 10px 20px rgba(251, 113, 133, 0.3);
 }
 
-/* Contact Section - Direct Cards (Email & WhatsApp) */
+/* Contact Section - Availability Banner */
+.availability-banner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.4rem;
+    background: rgba(52, 211, 153, 0.07);
+    border: 1px solid rgba(52, 211, 153, 0.25);
+    border-radius: 1.4rem;
+    padding: 1.4rem 2.8rem;
+    max-width: 600px;
+    margin: 0 auto 5rem;
+    backdrop-filter: blur(8px);
+}
+
+.avail-pulse {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.avail-pulse .pulse-dot {
+    background: #34d399;
+    box-shadow: 0 0 10px #34d399;
+}
+
+.availability-banner p {
+    font-size: 1.5rem;
+    color: var(--text-muted);
+    margin: 0;
+    line-height: 1.5;
+}
+
+.availability-banner strong {
+    color: #34d399;
+}
+
+[data-theme="light"] .availability-banner {
+    background: rgba(5, 150, 105, 0.06);
+    border-color: rgba(5, 150, 105, 0.2);
+}
+
+[data-theme="light"] .availability-banner strong {
+    color: #059669;
+}
+
+[data-theme="light"] .avail-pulse .pulse-dot {
+    background: #059669;
+    box-shadow: 0 0 8px #059669;
+}
+
+/* Contact Section - Cards grid */
 .contact-cards-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 3rem;
     max-width: 850px;
     margin: 0 auto;
+}
+
+/* 4 cards: 2x2 grid */
+.contact-cards-4 {
+    max-width: 1050px;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+@media (max-width: 700px) {
+    .contact-cards-4 {
+        grid-template-columns: 1fr;
+    }
 }
 
 .contact-card {
@@ -1393,11 +1456,64 @@ section {
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
 
-.contact-card:hover .contact-card-icon {
-    background: var(--gradient);
-    color: var(--bg-color);
-    transform: scale(1.08) rotate(5deg);
+/* Brand colors — icon + background tint */
+.contact-card-icon--email {
+    background: rgba(250, 30, 78, 0.12);
+    border-color: rgba(250, 30, 78, 0.3);
+    color: #fa1e4e;
 }
+
+.contact-card-icon--whatsapp {
+    background: rgba(37, 211, 102, 0.12);
+    border-color: rgba(37, 211, 102, 0.3);
+    color: #25d366;
+}
+
+.contact-card-icon--linkedin {
+    background: rgba(10, 102, 194, 0.12);
+    border-color: rgba(10, 102, 194, 0.3);
+    color: #0a66c2;
+}
+
+.contact-card-icon--github {
+    background: rgba(255, 255, 255, 0.07);
+    border-color: rgba(255, 255, 255, 0.15);
+    color: #e2e8f0;
+}
+
+[data-theme="light"] .contact-card-icon--github {
+    background: rgba(36, 41, 46, 0.08);
+    border-color: rgba(36, 41, 46, 0.2);
+    color: #24292e;
+}
+
+/* Hover: each keeps its brand color but scales up */
+.contact-card:hover .contact-card-icon {
+    transform: scale(1.08) rotate(5deg);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.25);
+}
+
+.contact-card:hover .contact-card-icon--email {
+    background: #fa1e4e;
+    color: #fff;
+}
+
+.contact-card:hover .contact-card-icon--whatsapp {
+    background: #25d366;
+    color: #fff;
+}
+
+.contact-card:hover .contact-card-icon--linkedin {
+    background: #0a66c2;
+    color: #fff;
+}
+
+.contact-card:hover .contact-card-icon--github {
+    background: #24292e;
+    color: #fff;
+}
+
+
 
 .contact-card-info h3 {
     font-size: 2.2rem;
