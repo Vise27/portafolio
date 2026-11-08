@@ -126,55 +126,46 @@
                         </div>
                     </div>
 
-                    <div class="about-carousel-wrapper">
-                        <!-- Carousel Container with side arrows -->
-                        <div class="carousel-container" id="about-carousel">
-                            <button class="carousel-btn prev" id="carousel-prev" aria-label="Tarjeta anterior">
-                                <i class='bx bx-chevron-left'></i>
-                            </button>
-
-                            <div class="carousel-track">
-                                <div class="bento-card glass carousel-slide active">
-                                    <div class="bento-text">
-                                        <h4>Enfoque Profesional</h4>
-                                        <p>Sistemas ERP, desarrollo backend y aplicaciones a medida orientadas a
-                                            optimizar flujos comerciales y operacionales.</p>
-                                    </div>
-                                </div>
-
-                                <div class="bento-card glass carousel-slide">
-                                    <div class="bento-text">
-                                        <h4>Ubicación & Disponibilidad</h4>
-                                        <p>Piura, Perú · Abierto a oportunidades y retos profesionales en modalidad
-                                            <strong>Presencial</strong>,<strong>Remota</strong> y
-                                            <strong>Híbrida</strong>.</p>
-                                    </div>
-                                </div>
-
-                                <div class="bento-card glass carousel-slide">
-                                    <div class="bento-text">
-                                        <h4>Aprendizaje Continuo</h4>
-                                        <p>Actualmente profundizando en microservicios, optimización en bases de datos y
-                                            despliegues con Docker.</p>
-                                    </div>
-                                </div>
-
-                                <div class="bento-card glass carousel-slide">
-                                    <div class="bento-text">
-                                        <h4>Filosofía de Trabajo</h4>
-                                        <p>Entender la lógica y necesidad real del negocio a fondo antes de diseñar o
-                                            escribir una sola línea de código.</p>
-                                    </div>
-                                </div>
+                    <!-- Terminal Code Editor (Right Column) -->
+                    <div class="code-terminal glass">
+                        <div class="terminal-header">
+                            <div class="terminal-dots">
+                                <span class="dot red"></span>
+                                <span class="dot yellow"></span>
+                                <span class="dot green"></span>
                             </div>
-
-                            <button class="carousel-btn next" id="carousel-next" aria-label="Siguiente tarjeta">
-                                <i class='bx bx-chevron-right'></i>
+                            <div class="terminal-title">
+                                <i class='bx bxl-python'></i> developer.py
+                            </div>
+                            <button class="terminal-copy-btn" id="terminal-copy" title="Copiar código" aria-label="Copiar código">
+                                <i class='bx bx-copy'></i>
                             </button>
                         </div>
+                        <div class="terminal-body">
+                            <pre><code class="language-python"><span class="code-comment"># Perfil Técnico & Filosofía de Desarrollo</span>
+<span class="code-keyword">class</span> <span class="code-class">SoftwareDeveloper</span>:
+    <span class="code-keyword">def</span> <span class="code-func">__init__</span>(<span class="code-param">self</span>):
+        <span class="code-param">self</span>.name = <span class="code-str">"Marco Vise"</span>
+        <span class="code-param">self</span>.education = <span class="code-str">"TECSUP (Diseño y Software)"</span>
+        <span class="code-param">self</span>.core_stack = [<span class="code-str">"Odoo ERP"</span>, <span class="code-str">"Django"</span>, <span class="code-str">"PostgreSQL"</span>]
+        <span class="code-param">self</span>.frontend = [<span class="code-str">"React"</span>, <span class="code-str">"Flutter"</span>]
+        <span class="code-param">self</span>.status = <span class="code-str">"Disponible para nuevos retos"</span>
 
-                        <!-- Carousel Indicators -->
-                        <div class="carousel-indicators" id="carousel-dots"></div>
+    <span class="code-keyword">def</span> <span class="code-func">filosofia</span>(<span class="code-param">self</span>) -> <span class="code-builtin">dict</span>:
+        <span class="code-keyword">return</span> {
+            <span class="code-str">"enfoque"</span>: <span class="code-str">"Entender el negocio antes del código"</span>,
+            <span class="code-str">"prioridad"</span>: <span class="code-str">"Arquitectura limpia, modular y escalable"</span>,
+            <span class="code-str">"modalidad"</span>: [<span class="code-str">"Presencial"</span>, <span class="code-str">"Remota"</span>, <span class="code-str">"Híbrida"</span>]
+        }
+
+<span class="code-var">dev</span> = <span class="code-class">SoftwareDeveloper</span>()
+<span class="code-builtin">print</span>(<span class="code-var">dev</span>.filosofia())</code></pre>
+                        </div>
+                        <div class="terminal-footer">
+                            <span class="terminal-tag"><i class='bx bx-check-circle'></i> Python 3.12</span>
+                            <span class="terminal-tag"><i class='bx bx-git-branch'></i> main</span>
+                            <span class="terminal-tag status-live"><span class="pulse-dot"></span> Ready</span>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -198,10 +189,10 @@
                             analizando los flujos operativos de la empresa para traducirlos en prototipos de diseño y
                             las primeras interfaces funcionales.</p>
                         <div class="exp-tags">
-                            <span>Flutter</span>
-                            <span>Firebase</span>
-                            <span>Figma</span>
-                            <span>Modelado de Datos</span>
+                            <span><i class="devicon-flutter-plain colored"></i> Flutter</span>
+                            <span><i class="devicon-firebase-plain colored"></i> Firebase</span>
+                            <span><i class="devicon-figma-plain colored"></i> Figma</span>
+                            <span><i class='bx bx-data tech-custom-icon'></i> Modelado de Datos</span>
                         </div>
                         <ul class="exp-list">
                             <li><i class='bx bx-check-circle'></i> Relevé y analicé los flujos de inspección y
@@ -234,11 +225,11 @@
                                 nativamente con el CRM de Odoo para centralizar la gestión de propiedades, propietarios
                                 y el flujo de ventas.</p>
                             <div class="project-techs">
-                                <span>Odoo ERP</span>
-                                <span>Python</span>
-                                <span>PostgreSQL</span>
-                                <span>XML Views</span>
-                                <span>JavaScript</span>
+                                <span><i class='bx bx-briefcase-alt-2 tech-custom-icon odoo-icon'></i> Odoo ERP</span>
+                                <span><i class="devicon-python-plain colored"></i> Python</span>
+                                <span><i class="devicon-postgresql-plain colored"></i> PostgreSQL</span>
+                                <span><i class='bx bx-code-alt tech-custom-icon'></i> XML Views</span>
+                                <span><i class="devicon-javascript-plain colored"></i> JavaScript</span>
                             </div>
                             <button class="btn btn-small" onclick="openModal('modal-inmobiliaria')">Detalles del
                                 Proyecto</button>
