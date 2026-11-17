@@ -32,8 +32,9 @@
     <meta property="og:description"
         content="Desarrollador de Software Full Stack enfocado en aplicaciones web y móviles con React, Python (Django), PostgreSQL y Flutter.">
     <meta property="og:image" content="assets/og-image.png">
-    <meta property="og:url" content="https://marcovine.com">
+    <meta property="og:url" content="https://vise27.github.io/portafolio/">
     <meta property="og:type" content="website">
+    <link rel="canonical" href="https://vise27.github.io/portafolio/">
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
@@ -48,7 +49,7 @@
       "@context": "https://schema.org",
       "@type": "Person",
       "name": "Marco Vise Sernaque",
-      "url": "https://github.com/Vise27",
+      "url": "https://vise27.github.io/portafolio/",
       "jobTitle": "Full Stack Software Developer",
       "worksFor": {
         "@type": "Organization",
@@ -164,10 +165,11 @@
     <span class="code-keyword">def</span> <span class="code-func">__init__</span>(<span class="code-param">self</span>):
         <span class="code-param">self</span>.name = <span class="code-str">"Marco Vise"</span>
         <span class="code-param">self</span>.education = <span class="code-str">"TECSUP (Diseño y Software)"</span>
-        <span class="code-param">self</span>.core_stack = [<span class="code-str">"Odoo ERP"</span>, <span class="code-str">"Django"</span>, <span class="code-str">"PostgreSQL"</span>]
-        <span class="code-param">self</span>.frontend = [<span class="code-str">"React"</span>, <span class="code-str">"Flutter"</span>]
-        <span class="code-param">self</span>.backend = [<span class="code-str">"Python / Django"</span>, <span class="code-str">"PostgreSQL"</span>, <span class="code-str">"Odoo"</span>]
-        <span class="code-param">self</span>.frontend_mobile = [<span class="code-str">"React"</span>, <span class="code-str">"Flutter"</span>, <span class="code-str">"JavaScript"</span>]
+        <span class="code-param">self</span>.stack = {
+            <span class="code-str">"backend"</span>: [<span class="code-str">"Python / Django"</span>, <span class="code-str">"Odoo ERP"</span>, <span class="code-str">"PostgreSQL"</span>],
+            <span class="code-str">"frontend_mobile"</span>: [<span class="code-str">"React"</span>, <span class="code-str">"Flutter"</span>, <span class="code-str">"JavaScript"</span>],
+            <span class="code-str">"tools"</span>: [<span class="code-str">"Docker"</span>, <span class="code-str">"Git"</span>, <span class="code-str">"Postman"</span>]
+        }
         <span class="code-param">self</span>.status = <span class="code-str">"Disponible para nuevos retos"</span>
 
     <span class="code-keyword">def</span> <span class="code-func">filosofia</span>(<span class="code-param">self</span>) -> <span class="code-builtin">dict</span>:
@@ -498,7 +500,7 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="footer-text">
-            <p>&copy; 2026 Marco Vise | Desarrollador de Software</p>
+            <p>&copy; <span id="current-year"></span> Marco Vise | Desarrollador de Software</p>
         </div>
         <div class="footer-iconTop">
             <a href="#home"><i class='bx bx-up-arrow-alt'></i></a>

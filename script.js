@@ -283,8 +283,15 @@ if (imageLightbox) {
     });
 }
 
-// Add click event to images
+// Initialize dynamic content on DOM load
 document.addEventListener('DOMContentLoaded', () => {
+    // Dynamic year in footer
+    const yearEl = document.getElementById('current-year');
+    if (yearEl) {
+        yearEl.textContent = new Date().getFullYear();
+    }
+
+    // Add click event to images for lightbox
     const clickableImages = document.querySelectorAll('.modal-gallery img, .timeline-card-image img');
     clickableImages.forEach(img => {
         img.addEventListener('click', () => {
