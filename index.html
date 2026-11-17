@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Marco Vise Sernaque | Portafolio</title>
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -25,19 +26,21 @@
         })();
     </script>
     <meta name="description"
-        content="Marco Vise – Desarrollador de Software enfocado en Django, React, Odoo y PostgreSQL.">
-    content="Marco Vise – Desarrollador de Software Full Stack con experiencia en React, Django, PostgreSQL, Flutter y
-    Odoo ERP.">
-    <!-- Open Graph -->
-    <meta property="og:title" content="Marco Vise | Portafolio">
+        content="Marco Vise – Desarrollador de Software Full Stack con experiencia en React, Django, PostgreSQL, Flutter y Odoo ERP.">
+    <!-- Open Graph / Redes Sociales -->
     <meta property="og:title" content="Marco Vise | Portafolio Full Stack">
     <meta property="og:description"
-        content="Desarrollador de Software con proyectos en Odoo ERP, Django, React y Flutter.">
-    content="Desarrollador de Software Full Stack enfocado en aplicaciones web y móviles con React, Python (Django),
-    PostgreSQL y Flutter.">
+        content="Desarrollador de Software Full Stack enfocado en aplicaciones web y móviles con React, Python (Django), PostgreSQL y Flutter.">
     <meta property="og:image" content="assets/og-image.png">
     <meta property="og:url" content="https://marcovine.com">
     <meta property="og:type" content="website">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Marco Vise | Portafolio Full Stack">
+    <meta name="twitter:description"
+        content="Desarrollador de Software Full Stack enfocado en aplicaciones web y móviles con React, Python (Django), PostgreSQL y Flutter.">
+    <meta name="twitter:image" content="assets/og-image.png">
 
     <!-- Schema.org Person JSON-LD para SEO -->
     <script type="application/ld+json">
@@ -75,8 +78,7 @@
         <nav class="navbar" id="navbar">
             <a href="#home" class="active">Inicio</a>
             <a href="#about">Sobre Mí</a>
-            <a href="#experience">Experiencia</a>
-            <a href="#projects">Proyectos</a>
+            <a href="#trajectory">Trayectoria</a>
             <a href="#education">Educación</a>
             <a href="#skills">Habilidades</a>
             <a href="#contact">Contacto</a>
@@ -86,9 +88,9 @@
             <button class="theme-toggle" id="theme-toggle" aria-label="Cambiar tema">
                 <i class='bx bx-sun' id="theme-icon"></i>
             </button>
-            <div class="menu-icon" id="menu-icon" aria-label="Abrir menú">
+            <button class="menu-icon" id="menu-icon" aria-label="Abrir menú">
                 <i class='bx bx-menu'></i>
-            </div>
+            </button>
         </div>
     </header>
 
@@ -112,7 +114,7 @@
                 </div>
                 <div class="home-btns">
                     <a href="#contact" class="btn">Contáctame</a>
-                    <a href="#projects" class="btn btn-outline">Ver Proyectos</a>
+                    <a href="#trajectory" class="btn btn-outline">Ver Trayectoria</a>
                 </div>
             </div>
         </section>
@@ -134,7 +136,7 @@
                         </p>
 
                         <div class="about-cta">
-                            <a href="#experience" class="btn btn-small">Ver Experiencia</a>
+                            <a href="#trajectory" class="btn btn-small">Ver Trayectoria</a>
                             <a href="https://github.com/Vise27" target="_blank" class="btn btn-outline btn-small"><i
                                     class='bx bxl-github'></i> GitHub</a>
                         </div>
@@ -188,77 +190,68 @@
             </div>
         </section>
 
-        <!-- Experience Section (Highlighted) -->
-        <section class="experience" id="experience">
-            <h2 class="heading">Experiencia <span>Profesional</span></h2>
-            <div class="experience-showcase">
-                <!-- Featured Experience -->
-                <div class="exp-card featured">
-                    <div class="exp-header">
-                        <div class="exp-title-group">
-                            <h3>OVEMAC</h3>
-                            <h4>Pasante - Desarrollador Mobile CRM</h4>
+        <!-- Trayectoria Profesional Section (Unified Timeline) -->
+        <section class="trajectory" id="trajectory">
+            <h2 class="heading">Trayectoria <span>Profesional</span></h2>
+            <div class="timeline">
+                <!-- Entry 1: Freelance — Sistema Inmobiliario Odoo -->
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-card glass">
+                        <div class="timeline-card-header">
+                            <span class="timeline-badge badge-freelance"><i class='bx bx-briefcase'></i> Freelance</span>
+                            <span class="timeline-date"><i class='bx bx-calendar'></i> 2025</span>
                         </div>
-                        <span class="exp-date">Enero 2025 – Febrero 2025</span>
-                    </div>
-                    <div class="exp-body">
-                        <p>Participé en la fase inicial del aplicativo móvil CRM para General Hydraulic Company,
-                            analizando los flujos operativos de la empresa para traducirlos en prototipos de diseño y
-                            las primeras interfaces funcionales.</p>
-                        <div class="exp-tags">
-                            <span><i class="devicon-flutter-plain colored"></i> Flutter</span>
-                            <span><i class="devicon-firebase-plain colored"></i> Firebase</span>
-                            <span><i class="devicon-figma-plain colored"></i> Figma</span>
-                            <span><i class='bx bx-data tech-custom-icon'></i> Modelado de Datos</span>
-                        </div>
-                        <ul class="exp-list">
-                            <li><i class='bx bx-check-circle'></i> Relevé y analicé los flujos de inspección y
-                                cotizaciones para plasmar la experiencia en prototipos de Figma.</li>
-                            <li><i class='bx bx-check-circle'></i> Desarrollé las pantallas base y componentes iniciales
-                                de la aplicación móvil utilizando Flutter.</li>
-                            <li><i class='bx bx-check-circle'></i> Diseñé la estructura y colecciones en Firebase
-                                Firestore para la gestión de datos en tiempo real.</li>
-                            <li><i class='bx bx-check-circle'></i> Documenté la base del proyecto para facilitar la
-                                continuidad y escalabilidad con los siguientes equipos.</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Proyectos Section -->
-        <section class="projects" id="projects">
-            <h2 class="heading">Mis <span>Proyectos</span></h2>
-            <div class="projects-container">
-                <div class="project-box glass">
-                    <div class="project-layout">
-                        <div class="project-info">
-                            <div class="project-header">
+                        <div class="timeline-card-content">
+                            <div class="timeline-card-body">
                                 <h3><i class='bx bx-building-house'></i> Sistema de Gestión Inmobiliaria y CRM</h3>
-                                <span class="project-subtitle">Basado en Odoo ERP | <strong style="color: #4CAF50;">En
-                                        Producción (Sistema Interno)</strong></span>
+                                <p class="timeline-subtitle">Odoo ERP · <strong class="status-production">En Producción</strong></p>
+                                <p class="timeline-desc">Desarrollo e implementación de un módulo personalizado integrado nativamente con el CRM de Odoo para centralizar la gestión de propiedades, propietarios y el flujo de ventas.</p>
+                                <div class="timeline-techs">
+                                    <span><i class='bx bx-briefcase-alt-2 tech-custom-icon odoo-icon'></i> Odoo ERP</span>
+                                    <span><i class="devicon-python-plain colored"></i> Python</span>
+                                    <span><i class="devicon-postgresql-plain colored"></i> PostgreSQL</span>
+                                    <span><i class='bx bx-code-alt tech-custom-icon'></i> XML Views</span>
+                                    <span><i class="devicon-javascript-plain colored"></i> JavaScript</span>
+                                </div>
+                                <div class="timeline-actions">
+                                    <button class="btn btn-small" onclick="openModal('modal-inmobiliaria')">Ver Detalles</button>
+                                </div>
                             </div>
-                            <p class="project-desc">Desarrollo e implementación de un módulo personalizado integrado
-                                nativamente con el CRM de Odoo para centralizar la gestión de propiedades, propietarios
-                                y el flujo de ventas.</p>
-                            <div class="project-techs">
-                                <span><i class='bx bx-briefcase-alt-2 tech-custom-icon odoo-icon'></i> Odoo ERP</span>
-                                <span><i class="devicon-python-plain colored"></i> Python</span>
-                                <span><i class="devicon-postgresql-plain colored"></i> PostgreSQL</span>
-                                <span><i class='bx bx-code-alt tech-custom-icon'></i> XML Views</span>
-                                <span><i class="devicon-javascript-plain colored"></i> JavaScript</span>
+                            <div class="timeline-card-image">
+                                <img src="assets/odoo_1.png" alt="Sistema Inmobiliario Odoo CRM" loading="lazy">
                             </div>
-                            <button class="btn btn-small" onclick="openModal('modal-inmobiliaria')">Detalles del
-                                Proyecto</button>
-                        </div>
-                        <div class="project-image">
-                            <img src="assets/odoo_1.png" alt="Sistema Inmobiliario Odoo CRM" loading="lazy"
-                                style="border-radius: 2rem; box-shadow: 0 10px 30px rgba(0,0,0,0.5); width: 100%;">
                         </div>
                     </div>
                 </div>
 
-
+                <!-- Entry 2: Pasantía — OVEMAC -->
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-card glass">
+                        <div class="timeline-card-header">
+                            <span class="timeline-badge badge-internship"><i class='bx bx-buildings'></i> Pasantía</span>
+                            <span class="timeline-date"><i class='bx bx-calendar'></i> Enero – Febrero 2025</span>
+                        </div>
+                        <div class="timeline-card-body">
+                            <h3>OVEMAC</h3>
+                            <p class="timeline-subtitle">Desarrollador Mobile CRM · General Hydraulic Company</p>
+                            <p class="timeline-desc">Participé en la fase inicial del aplicativo móvil CRM, analizando los flujos operativos de la empresa para traducirlos en prototipos de diseño y las primeras interfaces funcionales.</p>
+                            <div class="timeline-techs">
+                                <span><i class="devicon-flutter-plain colored"></i> Flutter</span>
+                                <span><i class="devicon-firebase-plain colored"></i> Firebase</span>
+                                <span><i class="devicon-figma-plain colored"></i> Figma</span>
+                                <span><i class='bx bx-data tech-custom-icon'></i> Modelado de Datos</span>
+                            </div>
+                            <ul class="timeline-achievements">
+                                <li><i class='bx bx-check-circle'></i> Relevé y analicé los flujos de inspección y cotizaciones para plasmar la experiencia en prototipos de Figma.</li>
+                                <li><i class='bx bx-check-circle'></i> Desarrollé las pantallas base y componentes iniciales de la aplicación móvil utilizando Flutter.</li>
+                                <li><i class='bx bx-check-circle'></i> Diseñé la estructura y colecciones en Firebase Firestore para la gestión de datos en tiempo real.</li>
+                                <li><i class='bx bx-check-circle'></i> Documenté la base del proyecto para facilitar la continuidad y escalabilidad con los siguientes equipos.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
 
@@ -573,7 +566,7 @@
     <!-- Lightbox para Imágenes -->
     <div class="image-lightbox" id="image-lightbox">
         <span class="close-lightbox" onclick="closeImageLightbox()"><i class='bx bx-x'></i></span>
-        <img class="lightbox-img" id="lightbox-img" src="">
+        <img class="lightbox-img" id="lightbox-img" src="" alt="Vista ampliada de imagen">
     </div>
 
     <script src="script.js"></script>

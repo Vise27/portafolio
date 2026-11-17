@@ -161,7 +161,7 @@ window.addEventListener('scroll', () => {
 });
 
 // Intersection Observer for Reveal Effect
-const revealElements = document.querySelectorAll('.exp-card, .project-box, .edu-card, .skill-category, .about-content, .contact-item');
+const revealElements = document.querySelectorAll('.timeline-card, .edu-card, .skill-category, .about-content, .contact-card');
 
 const revealCallback = (entries, observer) => {
     entries.forEach(entry => {
@@ -256,9 +256,10 @@ if (modalOverlay) {
 const imageLightbox = document.getElementById('image-lightbox');
 const lightboxImg = document.getElementById('lightbox-img');
 
-function openImageLightbox(src) {
+function openImageLightbox(src, alt) {
     if(imageLightbox && lightboxImg) {
         lightboxImg.src = src;
+        lightboxImg.alt = alt || 'Vista ampliada de imagen';
         imageLightbox.classList.add('active');
         document.body.style.overflow = 'hidden';
     }
@@ -284,10 +285,10 @@ if (imageLightbox) {
 
 // Add click event to images
 document.addEventListener('DOMContentLoaded', () => {
-    const clickableImages = document.querySelectorAll('.modal-gallery img, .project-image img');
+    const clickableImages = document.querySelectorAll('.modal-gallery img, .timeline-card-image img');
     clickableImages.forEach(img => {
         img.addEventListener('click', () => {
-            openImageLightbox(img.src);
+            openImageLightbox(img.src, img.alt);
         });
     });
 });

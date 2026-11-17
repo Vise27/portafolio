@@ -5,7 +5,6 @@
     text-decoration: none;
     border: none;
     outline: none;
-    scroll-behavior: smooth;
     font-family: 'Inter', sans-serif;
 }
 
@@ -47,6 +46,7 @@ h4,
 html {
     font-size: 62.5%;
     overflow-x: hidden;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -191,6 +191,8 @@ section {
     display: none;
     font-size: 3rem;
     color: var(--text-color);
+    background: transparent;
+    border: none;
     cursor: pointer;
     transition: 0.3s;
 }
@@ -700,6 +702,315 @@ section {
 .exp-list li i {
     color: var(--main-color);
     font-size: 2.2rem;
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   Trayectoria Profesional Section (Unified Timeline)
+   ═══════════════════════════════════════════════════════════════ */
+.trajectory {
+    background: transparent;
+    padding: 10rem 9% 6rem;
+}
+
+.timeline {
+    max-width: 1000px;
+    margin: 0 auto;
+    position: relative;
+    padding-left: 4.5rem;
+}
+
+/* Vertical timeline line */
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 1.2rem;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: linear-gradient(to bottom, var(--main-color) 0%, rgba(250, 30, 78, 0.3) 60%, rgba(250, 30, 78, 0.05) 100%);
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 4rem;
+}
+
+.timeline-item:last-child {
+    margin-bottom: 0;
+}
+
+/* Marker dot on the timeline */
+.timeline-marker {
+    position: absolute;
+    left: -3.3rem;
+    top: 3.5rem;
+    width: 1.6rem;
+    height: 1.6rem;
+    border-radius: 50%;
+    background: var(--main-color);
+    border: 3px solid var(--bg-color);
+    box-shadow: 0 0 0 3px var(--main-color), 0 0 15px rgba(250, 30, 78, 0.4);
+    z-index: 2;
+}
+
+/* Timeline Card */
+.timeline-card {
+    padding: 3.5rem;
+    border-radius: 2.2rem;
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+.timeline-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    background: var(--gradient);
+    opacity: 0;
+    transition: 0.3s;
+}
+
+.timeline-card:hover {
+    border-color: var(--main-color);
+    transform: translateY(-8px);
+    box-shadow: 0 20px 45px rgba(250, 30, 78, 0.15);
+}
+
+.timeline-card:hover::before {
+    opacity: 1;
+}
+
+[data-theme="light"] .timeline-card {
+    background: #ffffff;
+    border-color: rgba(0, 0, 0, 0.08);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+[data-theme="light"] .timeline-card:hover {
+    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.1);
+}
+
+/* Card Header: badge + date */
+.timeline-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+/* Type Badges */
+.timeline-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    padding: 0.5rem 1.6rem;
+    border-radius: 5rem;
+    font-size: 1.25rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.badge-freelance {
+    background: rgba(52, 211, 153, 0.12);
+    color: #34d399;
+    border: 1px solid rgba(52, 211, 153, 0.3);
+}
+
+[data-theme="light"] .badge-freelance {
+    background: rgba(5, 150, 105, 0.08);
+    color: #059669;
+    border-color: rgba(5, 150, 105, 0.25);
+}
+
+.badge-internship {
+    background: rgba(56, 189, 248, 0.12);
+    color: #38bdf8;
+    border: 1px solid rgba(56, 189, 248, 0.3);
+}
+
+[data-theme="light"] .badge-internship {
+    background: rgba(2, 132, 199, 0.08);
+    color: #0284c7;
+    border-color: rgba(2, 132, 199, 0.25);
+}
+
+.timeline-date {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1.4rem;
+    color: var(--text-muted);
+    font-weight: 600;
+}
+
+/* Card Content: body + optional image, side by side */
+.timeline-card-content {
+    display: flex;
+    gap: 3.5rem;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.timeline-card-body {
+    flex: 1 1 400px;
+}
+
+.timeline-card-body h3 {
+    font-size: 2.8rem;
+    color: var(--text-color);
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+    margin-bottom: 0.8rem;
+}
+
+.timeline-card-body h3 i {
+    color: var(--main-color);
+    font-size: 3rem;
+}
+
+.timeline-subtitle {
+    font-size: 1.7rem;
+    color: var(--accent-color);
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+}
+
+.status-production {
+    color: #4CAF50;
+}
+
+[data-theme="light"] .status-production {
+    color: #2e7d32;
+}
+
+.timeline-desc {
+    font-size: 1.6rem;
+    line-height: 1.8;
+    color: var(--text-muted);
+    margin-bottom: 2rem;
+}
+
+/* Tech tags inside timeline */
+.timeline-techs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.timeline-techs span {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    padding: 0.5rem 1.4rem;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--glass-border);
+    border-radius: 1rem;
+    font-size: 1.3rem;
+    color: var(--text-color);
+    font-weight: 500;
+}
+
+.timeline-techs span i {
+    font-size: 1.6rem;
+    line-height: 1;
+}
+
+.timeline-techs span .tech-custom-icon {
+    color: var(--main-color);
+}
+
+[data-theme="light"] .timeline-techs span {
+    background: rgba(0, 0, 0, 0.04);
+    border-color: rgba(0, 0, 0, 0.1);
+}
+
+.timeline-actions {
+    margin-top: 1rem;
+}
+
+/* Optional card image */
+.timeline-card-image {
+    flex: 0 1 280px;
+    text-align: center;
+}
+
+.timeline-card-image img {
+    width: 100%;
+    max-width: 280px;
+    border-radius: 1.8rem;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.timeline-card-image img:hover {
+    transform: scale(1.03);
+}
+
+/* Achievements list */
+.timeline-achievements {
+    list-style: none;
+    margin-top: 1rem;
+}
+
+.timeline-achievements li {
+    font-size: 1.5rem;
+    color: var(--text-color);
+    margin-bottom: 1.2rem;
+    display: flex;
+    align-items: flex-start;
+    gap: 1.2rem;
+    opacity: 0.85;
+    line-height: 1.6;
+}
+
+.timeline-achievements li i {
+    color: var(--main-color);
+    font-size: 2rem;
+    flex-shrink: 0;
+    margin-top: 0.1rem;
+}
+
+/* Timeline Responsive */
+@media (max-width: 768px) {
+    .timeline {
+        padding-left: 3rem;
+    }
+
+    .timeline::before {
+        left: 0.8rem;
+    }
+
+    .timeline-marker {
+        left: -2.2rem;
+        width: 1.2rem;
+        height: 1.2rem;
+    }
+
+    .timeline-card {
+        padding: 2.5rem;
+    }
+
+    .timeline-card-body h3 {
+        font-size: 2.2rem;
+    }
+
+    .timeline-card-content {
+        flex-direction: column;
+    }
+
+    .timeline-card-image {
+        flex: 1 1 100%;
+    }
 }
 
 /* Education Section */
