@@ -26,10 +26,15 @@
     </script>
     <meta name="description"
         content="Marco Vise – Desarrollador de Software enfocado en Django, React, Odoo y PostgreSQL.">
+    content="Marco Vise – Desarrollador de Software Full Stack con experiencia en React, Django, PostgreSQL, Flutter y
+    Odoo ERP.">
     <!-- Open Graph -->
     <meta property="og:title" content="Marco Vise | Portafolio">
+    <meta property="og:title" content="Marco Vise | Portafolio Full Stack">
     <meta property="og:description"
         content="Desarrollador de Software con proyectos en Odoo ERP, Django, React y Flutter.">
+    content="Desarrollador de Software Full Stack enfocado en aplicaciones web y móviles con React, Python (Django),
+    PostgreSQL y Flutter.">
     <meta property="og:image" content="assets/og-image.png">
     <meta property="og:url" content="https://marcovine.com">
     <meta property="og:type" content="website">
@@ -56,11 +61,11 @@
 </head>
 
 <body>
-    <!-- Background Decoration -->
-    <div class="bg-decoration">
-        <div class="blob blob-1"></div>
-        <div class="blob blob-2"></div>
-        <div class="blob blob-3"></div>
+    <!-- Background Decoration: Engineering Matrix & Dynamic Glow -->
+    <div class="bg-decoration" aria-hidden="true">
+        <div class="bg-grid"></div>
+        <div class="bg-ambient-glow"></div>
+        <div class="bg-spotlight" id="bg-spotlight"></div>
     </div>
 
     <!-- Header / Navbar -->
@@ -93,17 +98,17 @@
             <div class="home-content">
                 <h3>Hola, soy</h3>
                 <h1>Marco Vise Sernaque</h1>
-                <h3>Desarrollador <span class="multiple-text"></span></h3>
-                <p>Desarrollador de software enfocado en la creación de aplicaciones web, móviles y sistemas de gestión
-                    empresarial. Cuento con experiencia práctica trabajando con <strong>Odoo ERP, Django, React y
-                        PostgreSQL</strong>, enfocado en crear soluciones funcionales, código limpio y software
-                    preparado para el negocio.
+                <h3>Desarrollador <span class="hero-role-text">Full Stack · Web &amp; Móvil</span></h3>
+                <p>Desarrollador de software enfocado en la creación de aplicaciones web, móviles y sistemas empresariales. Experiencia práctica trabajando con <strong>React, Flutter, Django y PostgreSQL</strong>, creando soluciones funcionales, código limpio y software preparado para el negocio.
                 </p>
                 <div class="social-media">
-                    <a href="https://www.linkedin.com/in/marco-vise" target="_blank"><i class='bx bxl-linkedin'></i></a>
-                    <a href="https://github.com/Vise27" target="_blank"><i class='bx bxl-github'></i></a>
-                    <a href="mailto:marco.vise2005@gmail.com"><i class='bx bx-envelope'></i></a>
-                    <a href="https://wa.me/51918562387" target="_blank"><i class='bx bxl-whatsapp'></i></a>
+                    <a href="https://www.linkedin.com/in/marco-vise" target="_blank" rel="noopener noreferrer"
+                        aria-label="LinkedIn"><i class='bx bxl-linkedin'></i></a>
+                    <a href="https://github.com/Vise27" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i
+                            class='bx bxl-github'></i></a>
+                    <a href="mailto:marco.vise2005@gmail.com" aria-label="Email"><i class='bx bx-envelope'></i></a>
+                    <a href="https://wa.me/51918562387" target="_blank" rel="noopener noreferrer"
+                        aria-label="WhatsApp"><i class='bx bxl-whatsapp'></i></a>
                 </div>
                 <div class="home-btns">
                     <a href="#contact" class="btn">Contáctame</a>
@@ -159,6 +164,8 @@
         <span class="code-param">self</span>.education = <span class="code-str">"TECSUP (Diseño y Software)"</span>
         <span class="code-param">self</span>.core_stack = [<span class="code-str">"Odoo ERP"</span>, <span class="code-str">"Django"</span>, <span class="code-str">"PostgreSQL"</span>]
         <span class="code-param">self</span>.frontend = [<span class="code-str">"React"</span>, <span class="code-str">"Flutter"</span>]
+        <span class="code-param">self</span>.backend = [<span class="code-str">"Python / Django"</span>, <span class="code-str">"PostgreSQL"</span>, <span class="code-str">"Odoo"</span>]
+        <span class="code-param">self</span>.frontend_mobile = [<span class="code-str">"React"</span>, <span class="code-str">"Flutter"</span>, <span class="code-str">"JavaScript"</span>]
         <span class="code-param">self</span>.status = <span class="code-str">"Disponible para nuevos retos"</span>
 
     <span class="code-keyword">def</span> <span class="code-func">filosofia</span>(<span class="code-param">self</span>) -> <span class="code-builtin">dict</span>:
@@ -569,8 +576,6 @@
         <img class="lightbox-img" id="lightbox-img" src="">
     </div>
 
-    <!-- Typed JS for typing animation -->
-    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
     <script src="script.js"></script>
 </body>
 

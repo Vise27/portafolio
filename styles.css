@@ -59,7 +59,7 @@ section {
     padding: 10rem 9% 2rem;
 }
 
-/* Background Decoration */
+/* Background Decoration: Engineering Matrix & Dynamic Glow */
 .bg-decoration {
     position: fixed;
     top: 0;
@@ -68,51 +68,67 @@ section {
     height: 100%;
     z-index: -1;
     overflow: hidden;
-    background-image: 
-        radial-gradient(rgba(250, 30, 78, 0.03) 1px, transparent 1px),
-        linear-gradient(to right, rgba(255, 255, 255, 0.015) 1px, transparent 1px);
-    background-size: 32px 32px, 64px 64px;
+    pointer-events: none;
+    background-color: var(--bg-color);
 }
 
-.blob {
+/* Subtle Engineering Dot Grid */
+.bg-grid {
     position: absolute;
-    width: 550px;
-    height: 550px;
-    background: var(--main-color);
-    filter: blur(120px);
-    border-radius: 50%;
-    opacity: 0.12;
-    animation: move 20s infinite alternate;
+    inset: 0;
+    background-image: 
+        radial-gradient(rgba(255, 255, 255, 0.09) 1.2px, transparent 1.2px),
+        linear-gradient(to right, rgba(255, 255, 255, 0.015) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(255, 255, 255, 0.015) 1px, transparent 1px);
+    background-size: 28px 28px, 112px 112px, 112px 112px;
+    mask-image: radial-gradient(ellipse 90% 70% at 50% 35%, #000 45%, transparent 95%);
+    -webkit-mask-image: radial-gradient(ellipse 90% 70% at 50% 35%, #000 45%, transparent 95%);
+    opacity: 0.85;
 }
 
-.blob-1 {
-    top: -10%;
-    left: -10%;
-    background: #fa1e4e;
+[data-theme="light"] .bg-grid {
+    background-image: 
+        radial-gradient(rgba(15, 23, 42, 0.12) 1.2px, transparent 1.2px),
+        linear-gradient(to right, rgba(15, 23, 42, 0.03) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(15, 23, 42, 0.03) 1px, transparent 1px);
+    opacity: 0.65;
 }
 
-.blob-2 {
-    bottom: -10%;
-    right: -10%;
-    background: #990a2a;
-    animation-delay: -5s;
-}
-
-.blob-3 {
-    top: 40%;
+/* Ambient Architectural Depth Glow */
+.bg-ambient-glow {
+    position: absolute;
+    top: -15%;
     left: 50%;
-    background: #d4113e;
-    animation-delay: -10s;
+    transform: translateX(-50%);
+    width: 900px;
+    height: 550px;
+    background: radial-gradient(ellipse at center, rgba(250, 30, 78, 0.12) 0%, rgba(250, 30, 78, 0.03) 50%, transparent 75%);
+    filter: blur(50px);
+    pointer-events: none;
 }
 
-@keyframes move {
-    from {
-        transform: translate(0, 0) scale(1);
-    }
+[data-theme="light"] .bg-ambient-glow {
+    background: radial-gradient(ellipse at center, rgba(225, 20, 64, 0.08) 0%, rgba(225, 20, 64, 0.02) 50%, transparent 75%);
+}
 
-    to {
-        transform: translate(100px, 100px) scale(1.2);
-    }
+/* Interactive Cursor Spotlight */
+.bg-spotlight {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 650px;
+    height: 650px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(250, 30, 78, 0.14) 0%, rgba(250, 30, 78, 0.04) 40%, transparent 70%);
+    transform: translate3d(calc(var(--cursor-x, 50vw) - 325px), calc(var(--cursor-y, 30vh) - 325px), 0);
+    will-change: transform;
+    pointer-events: none;
+    opacity: 0.85;
+    transition: opacity 0.4s ease;
+}
+
+[data-theme="light"] .bg-spotlight {
+    background: radial-gradient(circle, rgba(225, 20, 64, 0.10) 0%, rgba(225, 20, 64, 0.03) 40%, transparent 70%);
 }
 
 /* Header */
@@ -215,19 +231,21 @@ section {
 .home-content {
     text-align: center;
     z-index: 1;
+    max-width: 860px;
 }
 
 .home-content h3 {
     font-size: 2.8rem;
     font-weight: 600;
     color: var(--main-color);
+    margin: 0.5rem 0;
 }
 
 .home-content h1 {
     font-size: 7.2rem;
     font-weight: 800;
     line-height: 1.1;
-    margin: 1.5rem 0;
+    margin: 1.2rem 0;
     color: #ffffff;
     letter-spacing: -1px;
 }
@@ -236,10 +254,15 @@ section {
     color: #0f172a;
 }
 
+.hero-role-text {
+    color: var(--main-color);
+    font-weight: 700;
+}
+
 .home-content p {
     font-size: 1.8rem;
-    margin: 2.5rem auto;
-    max-width: 650px;
+    margin: 2.5rem auto 3.5rem;
+    max-width: 680px;
     line-height: 1.8;
     color: #94a3b8;
 }
@@ -1606,8 +1629,13 @@ textarea:focus-visible {
         display: block;
     }
 
+    .home-content h3 {
+        font-size: 2.2rem;
+    }
+
     .home-content h1 {
-        font-size: 4.8rem;
+        font-size: 4.6rem;
+        letter-spacing: -1px;
     }
 
     .heading {
@@ -1842,7 +1870,6 @@ textarea:focus-visible {
 
 .project-techs span .odoo-icon {
     color: #714b67;
-}
 }
 
 .project-visual-placeholder {

@@ -9,6 +9,39 @@ window.addEventListener('scroll', () => {
     scrollProgress.style.width = `${progress}%`;
 });
 
+// Interactive Engineering Spotlight with Smooth Lerp
+const bgSpotlight = document.getElementById('bg-spotlight');
+if (bgSpotlight) {
+    let mouseX = window.innerWidth / 2;
+    let mouseY = window.innerHeight * 0.35;
+    let currentX = mouseX;
+    let currentY = mouseY;
+    let isMoving = false;
+
+    window.addEventListener('mousemove', (e) => {
+        mouseX = e.clientX;
+        mouseY = e.clientY;
+        if (!isMoving) {
+            isMoving = true;
+            requestAnimationFrame(updateSpotlight);
+        }
+    }, { passive: true });
+
+    function updateSpotlight() {
+        currentX += (mouseX - currentX) * 0.12;
+        currentY += (mouseY - currentY) * 0.12;
+
+        bgSpotlight.style.setProperty('--cursor-x', `${currentX}px`);
+        bgSpotlight.style.setProperty('--cursor-y', `${currentY}px`);
+
+        if (Math.abs(mouseX - currentX) > 0.4 || Math.abs(mouseY - currentY) > 0.4) {
+            requestAnimationFrame(updateSpotlight);
+        } else {
+            isMoving = false;
+        }
+    }
+}
+
 // Mobile Hamburger Menu
 const menuIcon = document.getElementById('menu-icon');
 const navbar = document.getElementById('navbar');
@@ -125,15 +158,6 @@ window.addEventListener('scroll', () => {
     // Sticky navbar
     let header = document.querySelector('header');
     header.classList.toggle('sticky', window.scrollY > 100);
-});
-
-// Typed JS
-const typed = new Typed('.multiple-text', {
-    strings: ['Full Stack', 'Web & Móvil', 'en Odoo ERP', 'Backend Python / Django'],
-    typeSpeed: 60,
-    backSpeed: 40,
-    backDelay: 2200,
-    loop: true
 });
 
 // Intersection Observer for Reveal Effect
