@@ -1431,6 +1431,10 @@ section {
     color: #a24689; /* Color característico de Odoo */
 }
 
+.powerbi-icon {
+    color: #f2c811; /* Color característico de Power BI */
+}
+
 /* Light Mode Overrides for Tech Pills */
 [data-theme="light"] .tech-pill {
     background: #f8fafc;
