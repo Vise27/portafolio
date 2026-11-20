@@ -1435,6 +1435,10 @@ section {
     color: #f2c811; /* Color característico de Power BI */
 }
 
+.ai-icon {
+    color: #a855f7; /* Color violeta característico de IA / Agentes */
+}
+
 /* Light Mode Overrides for Tech Pills */
 [data-theme="light"] .tech-pill {
     background: #f8fafc;
