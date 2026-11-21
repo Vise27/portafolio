@@ -291,6 +291,26 @@ document.addEventListener('DOMContentLoaded', () => {
         yearEl.textContent = new Date().getFullYear();
     }
 
+    // Trajectory Tabs Switcher (Experiencia & Formación)
+    const trajTabBtns = document.querySelectorAll('.traj-tab-btn');
+    const tabPanes = document.querySelectorAll('.tab-pane');
+
+    if (trajTabBtns.length > 0) {
+        trajTabBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                const targetId = btn.getAttribute('data-target');
+                trajTabBtns.forEach(b => b.classList.remove('active'));
+                tabPanes.forEach(p => p.classList.remove('active'));
+
+                btn.classList.add('active');
+                const targetPane = document.getElementById(targetId);
+                if (targetPane) {
+                    targetPane.classList.add('active');
+                }
+            });
+        });
+    }
+
     // Add click event to images for lightbox
     const clickableImages = document.querySelectorAll('.modal-gallery img, .timeline-card-image img');
     clickableImages.forEach(img => {
@@ -298,4 +318,26 @@ document.addEventListener('DOMContentLoaded', () => {
             openImageLightbox(img.src, img.alt);
         });
     });
+
+    // Copy email to clipboard in contact section
+    const copyEmailBtn = document.getElementById('btn-copy-email');
+    if (copyEmailBtn) {
+        copyEmailBtn.addEventListener('click', () => {
+            const email = 'marco.vise2005@gmail.com';
+            navigator.clipboard.writeText(email).then(() => {
+                const icon = copyEmailBtn.querySelector('i');
+                const prevClass = icon.className;
+                icon.className = 'bx bx-check';
+                copyEmailBtn.style.background = '#22c55e';
+                copyEmailBtn.style.color = '#ffffff';
+                copyEmailBtn.style.borderColor = '#22c55e';
+                setTimeout(() => {
+                    icon.className = prevClass;
+                    copyEmailBtn.style.background = '';
+                    copyEmailBtn.style.color = '';
+                    copyEmailBtn.style.borderColor = '';
+                }, 2000);
+            });
+        });
+    }
 });

@@ -10,7 +10,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&family=Inter:wght@300;400;600&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700;800&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@300;400;500;600&family=Inter:wght@300;400;500;600&display=swap"
         rel="stylesheet">
     <!-- BoxIcons for icons -->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
@@ -77,12 +77,11 @@
         <a href="#" class="logo">Marco<span>Vise</span></a>
 
         <nav class="navbar" id="navbar">
-            <a href="#home" class="active">Inicio</a>
-            <a href="#about">Sobre Mí</a>
-            <a href="#trajectory">Trayectoria</a>
-            <a href="#education">Educación</a>
-            <a href="#skills">Habilidades</a>
-            <a href="#contact">Contacto</a>
+            <a href="#home" class="active"><span class="nav-idx">01</span>Inicio</a>
+            <a href="#about"><span class="nav-idx">02</span>Sobre Mí</a>
+            <a href="#trajectory"><span class="nav-idx">03</span>Trayectoria</a>
+            <a href="#skills"><span class="nav-idx">04</span>Habilidades</a>
+            <a href="#contact"><span class="nav-idx">05</span>Contacto</a>
         </nav>
 
         <div class="header-right">
@@ -96,26 +95,62 @@
     </header>
 
     <main>
-        <!-- Hero Section -->
+        <!-- Hero Section (Architectural & Tech-Editorial Style) -->
         <section class="home" id="home">
-            <div class="home-content">
-                <h3>Hola, soy</h3>
-                <h1>Marco Vise Sernaque</h1>
-                <h3>Desarrollador <span class="hero-role-text">Full Stack · Web &amp; Móvil</span></h3>
-                <p>Desarrollador de software enfocado en la creación de aplicaciones web, móviles, sistemas empresariales e integración de soluciones con IA. Experiencia práctica trabajando con <strong>React, Flutter, Django y PostgreSQL</strong>, creando soluciones funcionales, código limpio y software preparado para el negocio.
-                </p>
-                <div class="social-media">
-                    <a href="https://www.linkedin.com/in/marco-vise" target="_blank" rel="noopener noreferrer"
-                        aria-label="LinkedIn"><i class='bx bxl-linkedin'></i></a>
-                    <a href="https://github.com/Vise27" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i
-                            class='bx bxl-github'></i></a>
-                    <a href="mailto:marco.vise2005@gmail.com" aria-label="Email"><i class='bx bx-envelope'></i></a>
-                    <a href="https://wa.me/51918562387" target="_blank" rel="noopener noreferrer"
-                        aria-label="WhatsApp"><i class='bx bxl-whatsapp'></i></a>
-                </div>
-                <div class="home-btns">
-                    <a href="#contact" class="btn">Contáctame</a>
-                    <a href="#trajectory" class="btn btn-outline">Ver Trayectoria</a>
+            <div class="hero-topo-rings" aria-hidden="true">
+                <svg viewBox="0 0 900 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="450" cy="450" r="160" stroke="currentColor" stroke-width="1" stroke-dasharray="4 4" />
+                    <circle cx="450" cy="450" r="240" stroke="currentColor" stroke-width="1" />
+                    <circle cx="450" cy="450" r="320" stroke="currentColor" stroke-width="1" stroke-dasharray="6 6" />
+                    <circle cx="450" cy="450" r="400" stroke="currentColor" stroke-width="1" />
+                    <circle cx="450" cy="450" r="480" stroke="currentColor" stroke-width="1" stroke-dasharray="3 5" />
+                </svg>
+            </div>
+
+            <div class="home-container">
+                <div class="home-content">
+                    <div class="hero-eyebrow">
+                        <span class="eyebrow-symbol"><i class='bx bx-asterisk'></i></span>
+                        <span class="eyebrow-text">DESARROLLADOR DE SOFTWARE</span>
+                    </div>
+
+                    <h1 class="hero-name">MARCO<br>VISE SERNAQUE<span class="dot-accent">.</span></h1>
+
+                    <p class="hero-role-headline">Full Stack Developer · Python, React, Flutter &amp; Odoo ERP</p>
+
+                    <p class="hero-description">
+                        Construyo experiencias digitales y sistemas empresariales robustos. Desde la arquitectura
+                        backend y modelado de datos hasta interfaces fluidas con integración de soluciones de IA.
+                    </p>
+
+                    <div class="hero-actions">
+                        <a href="#trajectory" class="btn-clean-primary">
+                            Explorar trayectoria <i class='bx bx-right-arrow-alt'></i>
+                        </a>
+                        <a href="#contact" class="btn-clean-ghost">
+                            Hablemos <i class='bx bx-arrow-back rotate-135'></i>
+                        </a>
+                        <div class="hero-social-strip">
+                            <a href="https://github.com/Vise27" target="_blank" rel="noopener noreferrer"
+                                aria-label="GitHub"><i class='bx bxl-github'></i></a>
+                            <a href="https://www.linkedin.com/in/marco-vise" target="_blank" rel="noopener noreferrer"
+                                aria-label="LinkedIn"><i class='bx bxl-linkedin'></i></a>
+                            <a href="mailto:marco.vise2005@gmail.com" aria-label="Email"><i
+                                    class='bx bx-envelope'></i></a>
+                        </div>
+                    </div>
+
+                    <div class="hero-status-strip">
+                        <div class="status-pill-badge">
+                            <span class="pulse-dot"></span>
+                            <div class="status-pill-text">
+                                <span class="status-micro-title">GRADO PROFESIONAL · PIURA, PE</span>
+                                <p>Bachiller Técnico en Software · Disponible para proyectos</p>
+                            </div>
+                        </div>
+                        <a href="#trajectory" class="status-link-btn">Ver trayectoria <i
+                                class='bx bx-right-arrow-alt'></i></a>
+                    </div>
                 </div>
             </div>
         </section>
@@ -123,15 +158,19 @@
         <!-- About Section -->
         <section class="about" id="about">
             <div class="about-content">
-                <h2 class="heading">Sobre <span>Mí</span></h2>
+                <div class="section-tag-center">
+                    <span class="section-tag-sub">02 / SOBRE MÍ</span>
+                </div>
+                <h2 class="heading-clean">Más allá <span>del código</span></h2>
                 <div class="about-grid">
                     <div class="about-info">
-                        <p>Soy <strong>Desarrollador de Software</strong> egresado de TECSUP con pasión por construir
+                        <p>Soy <strong>Desarrollador de Software</strong> con pasión por construir
                             aplicaciones que resuelvan problemas reales de gestión y negocio. Me gusta participar en
                             todo el ciclo: desde entender cómo opera una empresa hasta diseñar la arquitectura y llevar
                             el código a producción.</p>
                         <p>En el backend trabajo con <strong>Python (Django y Odoo ERP)</strong>, bases de datos
-                            <strong>PostgreSQL</strong> e <strong>integración de servicios de Inteligencia Artificial (APIs de LLMs)</strong>, complementándolo en el frontend y móvil con <strong>React y
+                            <strong>PostgreSQL</strong> e <strong>integración de servicios de Inteligencia Artificial
+                                (APIs de LLMs)</strong>, complementándolo en el frontend y móvil con <strong>React y
                                 Flutter</strong>. Me caracterizo por ser una persona autodidacta, comprometida con
                             escribir código limpio y siempre con disposición para aprender nuevas tecnologías.
                         </p>
@@ -160,27 +199,20 @@
                             </button>
                         </div>
                         <div class="terminal-body">
-                            <pre><code class="language-python"><span class="code-comment"># Perfil Técnico & Filosofía de Desarrollo</span>
+                            <pre><code class="language-python"><span class="code-comment"># Perfil Técnico & Filosofía</span>
 <span class="code-keyword">class</span> <span class="code-class">SoftwareDeveloper</span>:
     <span class="code-keyword">def</span> <span class="code-func">__init__</span>(<span class="code-param">self</span>):
         <span class="code-param">self</span>.name = <span class="code-str">"Marco Vise"</span>
-        <span class="code-param">self</span>.education = <span class="code-str">"TECSUP (Diseño y Software)"</span>
-        <span class="code-param">self</span>.stack = {
-            <span class="code-str">"backend"</span>: [<span class="code-str">"Python / Django"</span>, <span class="code-str">"Odoo ERP"</span>, <span class="code-str">"PostgreSQL"</span>],
-            <span class="code-str">"frontend_mobile"</span>: [<span class="code-str">"React"</span>, <span class="code-str">"Flutter"</span>, <span class="code-str">"JavaScript"</span>],
-            <span class="code-str">"tools"</span>: [<span class="code-str">"Docker"</span>, <span class="code-str">"Git"</span>, <span class="code-str">"Postman"</span>]
-        }
+        <span class="code-param">self</span>.role = <span class="code-str">"Full Stack · Web &amp; Móvil"</span>
         <span class="code-param">self</span>.status = <span class="code-str">"Disponible para nuevos retos"</span>
 
     <span class="code-keyword">def</span> <span class="code-func">filosofia</span>(<span class="code-param">self</span>) -> <span class="code-builtin">dict</span>:
         <span class="code-keyword">return</span> {
             <span class="code-str">"enfoque"</span>: <span class="code-str">"Entender el negocio antes del código"</span>,
-            <span class="code-str">"prioridad"</span>: <span class="code-str">"Arquitectura limpia, modular y escalable"</span>,
-            <span class="code-str">"modalidad"</span>: [<span class="code-str">"Presencial"</span>, <span class="code-str">"Remota"</span>, <span class="code-str">"Híbrida"</span>]
+            <span class="code-str">"prioridad"</span>: <span class="code-str">"Arquitectura limpia, modular y escalable"</span>
         }
 
-<span class="code-var">dev</span> = <span class="code-class">SoftwareDeveloper</span>()
-<span class="code-builtin">print</span>(<span class="code-var">dev</span>.filosofia())</code></pre>
+<span class="code-builtin">print</span>(<span class="code-class">SoftwareDeveloper</span>().filosofia())</code></pre>
                         </div>
                         <div class="terminal-footer">
                             <span class="terminal-tag"><i class='bx bx-check-circle'></i> Python 3.12</span>
@@ -192,139 +224,144 @@
             </div>
         </section>
 
-        <!-- Trayectoria Profesional Section (Unified Timeline) -->
+        <!-- Trayectoria Section (Tabs: Experiencia & Formación) -->
         <section class="trajectory" id="trajectory">
-            <h2 class="heading">Trayectoria <span>Profesional</span></h2>
-            <div class="timeline">
-                <!-- Entry 1: Freelance — Sistema Inmobiliario Odoo -->
-                <div class="timeline-item">
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-card glass">
-                        <div class="timeline-card-header">
-                            <span class="timeline-badge badge-freelance"><i class='bx bx-briefcase'></i> Freelance</span>
-                            <span class="timeline-date"><i class='bx bx-calendar'></i> 2025</span>
+            <div class="section-tag-center">
+                <span class="section-tag-sub">03 / TRAYECTORIA</span>
+            </div>
+            <h2 class="heading-clean">Experiencia <span>& Formación</span></h2>
+
+            <!-- Tabs selector -->
+            <div class="trajectory-tabs-bar">
+                <button class="traj-tab-btn active" data-target="tab-experiencia">
+                    <i class='bx bx-briefcase-alt-2'></i> Experiencia
+                </button>
+                <button class="traj-tab-btn" data-target="tab-formacion">
+                    <i class='bx bxs-graduation'></i> Formación
+                </button>
+            </div>
+
+            <!-- Tab 1: Experiencia (Editorial Minimalist List) -->
+            <div class="tab-pane active" id="tab-experiencia">
+                <div class="experience-clean-list">
+                    <!-- Item 1: Odoo ERP Freelance -->
+                    <div class="exp-list-item">
+                        <div class="exp-list-icon icon-odoo">
+                            <i class='bx bx-building-house'></i>
                         </div>
-                        <div class="timeline-card-content">
-                            <div class="timeline-card-body">
-                                <h3><i class='bx bx-building-house'></i> Sistema de Gestión Inmobiliaria y CRM</h3>
-                                <p class="timeline-subtitle">Odoo ERP · <strong class="status-production">En Producción</strong></p>
-                                <p class="timeline-desc">Desarrollo e implementación de un módulo personalizado integrado nativamente con el CRM de Odoo para centralizar la gestión de propiedades, propietarios y el flujo de ventas.</p>
-                                <div class="timeline-techs">
-                                    <span><i class='bx bx-briefcase-alt-2 tech-custom-icon odoo-icon'></i> Odoo ERP</span>
-                                    <span><i class="devicon-python-plain colored"></i> Python</span>
-                                    <span><i class="devicon-postgresql-plain colored"></i> PostgreSQL</span>
-                                    <span><i class='bx bx-code-alt tech-custom-icon'></i> XML Views</span>
-                                    <span><i class="devicon-javascript-plain colored"></i> JavaScript</span>
+                        <div class="exp-list-content">
+                            <div class="exp-list-header">
+                                <div class="exp-title-group">
+                                    <h3 class="exp-company">Sistema Inmobiliario &amp; CRM <span>· Freelance</span></h3>
+                                    <span class="status-badge-inline status-production"><span
+                                            class="pulse-dot-mini"></span> En Producción</span>
                                 </div>
-                                <div class="timeline-actions">
-                                    <button class="btn btn-small" onclick="openModal('modal-inmobiliaria')">Ver Detalles</button>
-                                </div>
+                                <span class="exp-meta-date">2025</span>
                             </div>
-                            <div class="timeline-card-image">
-                                <img src="assets/odoo_1.png" alt="Sistema Inmobiliario Odoo CRM" loading="lazy">
+
+                            <h4 class="exp-role">Desarrollador Odoo ERP &amp; Backend</h4>
+                            <p class="exp-meta-sub">Módulo Personalizado · Integración Nativa con CRM</p>
+
+                            <p class="exp-detail-desc">
+                                Desarrollo e implementación de un módulo empresarial integrado con Odoo CRM para
+                                centralizar la gestión de propiedades inmobiliarias, propietarios y automatización del
+                                pipeline de ventas con conversión multimoneda en tiempo real.
+                            </p>
+
+                            <div class="exp-tech-tags">
+                                <span><i class='bx bx-briefcase-alt-2 tech-custom-icon odoo-icon'></i> Odoo ERP</span>
+                                <span><i class="devicon-python-plain colored"></i> Python</span>
+                                <span><i class="devicon-postgresql-plain colored"></i> PostgreSQL</span>
+                                <span><i class='bx bx-code-alt tech-custom-icon'></i> XML Views</span>
+                                <span><i class="devicon-javascript-plain colored"></i> JavaScript</span>
+                            </div>
+
+                            <div class="exp-actions-strip">
+                                <button class="btn-clean-action" onclick="openModal('modal-inmobiliaria')">
+                                    <i class='bx bx-images'></i> Ver Galería y Detalles del Sistema <i
+                                        class='bx bx-right-arrow-alt'></i>
+                                </button>
                             </div>
                         </div>
                     </div>
-                </div>
 
-                <!-- Entry 2: Pasantía — OVEMAC -->
-                <div class="timeline-item">
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-card glass">
-                        <div class="timeline-card-header">
-                            <span class="timeline-badge badge-internship"><i class='bx bx-buildings'></i> Pasantía</span>
-                            <span class="timeline-date"><i class='bx bx-calendar'></i> Enero – Febrero 2025</span>
+                    <!-- Item 2: OVEMAC -->
+                    <div class="exp-list-item">
+                        <div class="exp-list-icon icon-mobile">
+                            <i class='bx bx-mobile-alt'></i>
                         </div>
-                        <div class="timeline-card-body">
-                            <h3>OVEMAC</h3>
-                            <p class="timeline-subtitle">Desarrollador Mobile CRM · General Hydraulic Company</p>
-                            <p class="timeline-desc">Participé en la fase inicial del aplicativo móvil CRM, analizando los flujos operativos de la empresa para traducirlos en prototipos de diseño y las primeras interfaces funcionales.</p>
-                            <div class="timeline-techs">
+                        <div class="exp-list-content">
+                            <div class="exp-list-header">
+                                <div class="exp-title-group">
+                                    <h3 class="exp-company">OVEMAC <span>· General Hydraulic Company</span></h3>
+                                    <span class="status-badge-inline status-intern"><i class='bx bx-buildings'></i>
+                                        Pasantía</span>
+                                </div>
+                                <span class="exp-meta-date">Ene – Feb 2025</span>
+                            </div>
+
+                            <h4 class="exp-role">Desarrollador Mobile CRM</h4>
+                            <p class="exp-meta-sub">Fase Inicial · Arquitectura y Prototipado Móvil</p>
+
+                            <p class="exp-detail-desc">
+                                Análisis de flujos de inspección técnica y cotizaciones, diseño de arquitectura de datos
+                                en Firebase Firestore y desarrollo de interfaces y componentes clave en Flutter para la
+                                digitalización operativa de la empresa.
+                            </p>
+
+                            <div class="exp-tech-tags">
                                 <span><i class="devicon-flutter-plain colored"></i> Flutter</span>
-                                <span><i class="devicon-firebase-plain colored"></i> Firebase</span>
+                                <span><i class="devicon-firebase-plain colored"></i> Firebase Firestore</span>
                                 <span><i class="devicon-figma-plain colored"></i> Figma</span>
                                 <span><i class='bx bx-data tech-custom-icon'></i> Modelado de Datos</span>
                             </div>
-                            <ul class="timeline-achievements">
-                                <li><i class='bx bx-check-circle'></i> Relevé y analicé los flujos de inspección y cotizaciones para plasmar la experiencia en prototipos de Figma.</li>
-                                <li><i class='bx bx-check-circle'></i> Desarrollé las pantallas base y componentes iniciales de la aplicación móvil utilizando Flutter.</li>
-                                <li><i class='bx bx-check-circle'></i> Diseñé la estructura y colecciones en Firebase Firestore para la gestión de datos en tiempo real.</li>
-                                <li><i class='bx bx-check-circle'></i> Documenté la base del proyecto para facilitar la continuidad y escalabilidad con los siguientes equipos.</li>
-                            </ul>
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
 
-        <!-- Education Section -->
-        <section class="education" id="education">
-            <h2 class="heading">Mi <span>Educación</span></h2>
-            <div class="education-layout">
-                <!-- Tarjeta Principal: TECSUP -->
-                <div class="edu-card main-edu glass">
-                    <div class="edu-card-top">
-                        <div class="edu-icon"><i class='bx bxs-graduation'></i></div>
-                        <div class="edu-title-group">
-                            <span class="edu-badge">Carrera Profesional Técnica</span>
-                            <h3>Diseño y Desarrollo de Software</h3>
-                            <h4>TECSUP</h4>
-                            <span class="edu-date"><i class='bx bx-calendar'></i> 2023 – 2025</span>
+            <!-- Tab 2: Formación (Editorial Minimalist List) -->
+            <div class="tab-pane" id="tab-formacion">
+                <div class="education-clean-list">
+                    <!-- Item 1: TECSUP Trujillo -->
+                    <div class="edu-list-item">
+                        <div class="edu-list-icon">
+                            <i class='bx bxs-graduation'></i>
+                        </div>
+                        <div class="edu-list-content">
+                            <div class="edu-list-header">
+                                <h3 class="edu-inst">TECSUP <span>· Trujillo</span></h3>
+                                <span class="edu-meta-date">2023 – 2025</span>
+                            </div>
+                            <h4 class="edu-degree">Bachiller Técnico en Diseño y Desarrollo de Software</h4>
+                            <p class="edu-meta-sub">Carrera Profesional Técnica · 3 años</p>
+                            <p class="edu-detail-desc">Formación orientada a ingeniería de software, arquitectura de
+                                sistemas, estructuras de datos, modelado de bases de datos relacionales y calidad de
+                                software.</p>
                         </div>
                     </div>
 
-                    <p class="edu-description">Formación intensiva de 3 años orientada a la ingeniería de software,
-                        arquitectura de sistemas y desarrollo de aplicaciones empresariales escalables.</p>
-
-                    <div class="edu-competencies">
-                        <h5>Áreas y Competencias Clave:</h5>
-                        <div class="edu-tags-grid">
-                            <span><i class='bx bx-check'></i> Estructuras de Datos y Algoritmos</span>
-                            <span><i class='bx bx-check'></i> Modelado de Bases de Datos Relacionales</span>
-                            <span><i class='bx bx-check'></i> Arquitectura y Patrones de Software</span>
-                            <span><i class='bx bx-check'></i> Desarrollo Web y Móvil Empresarial</span>
-                            <span><i class='bx bx-check'></i> Metodologías Ágiles (Scrum)</span>
-                            <span><i class='bx bx-check'></i> Calidad y Pruebas de Software</span>
+                    <!-- Item 2: Cisco Networking Academy -->
+                    <div class="edu-list-item">
+                        <div class="edu-list-icon icon-cert">
+                            <i class='bx bx-line-chart'></i>
                         </div>
-                    </div>
-                </div>
-
-                <!-- Columna Secundaria: Certificación & Formación Continua -->
-                <div class="edu-side-column">
-                    <!-- Tarjeta Certificación Cisco -->
-                    <div class="cert-compact-card glass">
-                        <div class="cert-compact-header">
-                            <div class="cert-mini-icon"><i class='bx bx-line-chart'></i></div>
-                            <div class="cert-compact-titles">
-                                <span class="cert-mini-badge">Certificación Oficial</span>
-                                <h4>Aspectos Básicos de Análisis de Datos</h4>
-                                <span class="cert-issuer">Cisco Networking Academy · Credly</span>
+                        <div class="edu-list-content">
+                            <div class="edu-list-header">
+                                <h3 class="edu-inst">Cisco Networking Academy <span>· Credly</span></h3>
+                                <span class="edu-meta-date">2024</span>
+                            </div>
+                            <h4 class="edu-degree">Aspectos Básicos de Análisis de Datos</h4>
+                            <p class="edu-meta-sub">Certificación Oficial Verificada</p>
+                            <p class="edu-detail-desc">Transformación, análisis y consulta de bases de datos
+                                relacionales con SQL, hojas de cálculo avanzadas y visualización con Tableau.</p>
+                            <div class="edu-link-action">
+                                <a href="https://www.credly.com/badges/a5c95fa0-5006-4a7c-921c-5ffc0ddec4bc/public_url"
+                                    target="_blank" rel="noopener noreferrer" class="cert-link-clean">
+                                    Ver Credencial Oficial <i class='bx bx-link-external'></i>
+                                </a>
                             </div>
                         </div>
-
-                        <p class="cert-compact-desc">Transformación, análisis y consulta de bases de datos relacionales
-                            con SQL, hojas de cálculo avanzadas (Excel) y visualización estratégica con Tableau.</p>
-
-                        <div class="cert-skills-pills">
-                            <span>SQL Relacional</span>
-                            <span>Excel</span>
-                            <span>Tableau</span>
-                        </div>
-
-                        <a href="https://www.credly.com/badges/a5c95fa0-5006-4a7c-921c-5ffc0ddec4bc/public_url"
-                            target="_blank" class="cert-link-btn">
-                            Ver Credencial Oficial <i class='bx bx-link-external'></i>
-                        </a>
-                    </div>
-
-                    <!-- Mini Tarjeta de Aprendizaje Autodidacta -->
-                    <div class="edu-route-card glass">
-                        <div class="route-header">
-                            <i class='bx bx-book-reader'></i>
-                            <h5>Autoaprendizaje Técnico</h5>
-                        </div>
-                        <p>Especialización práctica en arquitecturas backend con <strong>Python / Django</strong> y
-                            desarrollo modular en el ecosistema <strong>Odoo ERP</strong>.</p>
                     </div>
                 </div>
             </div>
@@ -332,167 +369,266 @@
 
         <!-- Skills Section -->
         <section class="skills" id="skills">
-            <h2 class="heading">Mis <span>Habilidades</span></h2>
-            <div class="skills-grid">
-                <!-- Categoría 1: Sistemas & Backend -->
-                <div class="skill-category glass">
-                    <div class="skill-category-header">
-                        <i class='bx bx-server'></i>
-                        <h3>Sistemas & Backend</h3>
+            <div class="section-tag-center">
+                <span class="section-tag-sub">04 / STACK & HABILIDADES</span>
+            </div>
+            <h2 class="heading-clean">Tecnologías <span>que Domino</span></h2>
+
+            <div class="bento-skills-grid">
+                <!-- Bento 1: Core Backend & ERP (Principal) -->
+                <article class="bento-card bento-core glass">
+                    <div class="bento-card-header">
+                        <div class="bento-eyebrow">
+                            <span class="bento-num">01</span>
+                            <span class="bento-cat">CORE STACK · ENFOQUE PRINCIPAL</span>
+                        </div>
+                        <h3>Sistemas Empresariales & Backend</h3>
                     </div>
-                    <div class="tech-items-grid">
-                        <div class="tech-pill">
+
+                    <div class="bento-pills-grid core-pills">
+                        <div class="tech-pill tech-pill-featured">
                             <i class="devicon-python-plain colored"></i>
-                            <span>Python</span>
+                            <div class="pill-info">
+                                <span class="pill-name">Python</span>
+                                <span class="pill-sub">Lenguaje Core</span>
+                            </div>
+                        </div>
+                        <div class="tech-pill tech-pill-featured">
+                            <i class='bx bx-briefcase-alt-2 tech-custom-icon odoo-icon'></i>
+                            <div class="pill-info">
+                                <span class="pill-name">Odoo ERP</span>
+                                <span class="pill-sub">Módulos & CRM</span>
+                            </div>
                         </div>
                         <div class="tech-pill">
                             <i class="devicon-django-plain colored"></i>
-                            <span>Django</span>
-                        </div>
-                        <div class="tech-pill">
-                            <i class='bx bx-briefcase-alt-2 tech-custom-icon odoo-icon'></i>
-                            <span>Odoo ERP</span>
+                            <div class="pill-info">
+                                <span class="pill-name">Django</span>
+                                <span class="pill-sub">Framework Web</span>
+                            </div>
                         </div>
                         <div class="tech-pill">
                             <i class="devicon-postgresql-plain colored"></i>
-                            <span>PostgreSQL</span>
+                            <div class="pill-info">
+                                <span class="pill-name">PostgreSQL</span>
+                                <span class="pill-sub">BBDD Relacional</span>
+                            </div>
                         </div>
                         <div class="tech-pill">
                             <i class='bx bx-transfer tech-custom-icon'></i>
-                            <span>REST APIs</span>
+                            <div class="pill-info">
+                                <span class="pill-name">REST APIs</span>
+                                <span class="pill-sub">Integración & Servicios</span>
+                            </div>
                         </div>
                         <div class="tech-pill">
-                            <i class="devicon-firebase-plain colored"></i>
-                            <span>Firebase</span>
+                            <i class="devicon-laravel-plain colored"></i>
+                            <div class="pill-info">
+                                <span class="pill-name">Laravel / PHP</span>
+                                <span class="pill-sub">Framework MVC & APIs</span>
+                            </div>
                         </div>
                     </div>
-                </div>
+                </article>
 
-                <!-- Categoría 2: Desarrollo Móvil & Web -->
-                <div class="skill-category glass">
-                    <div class="skill-category-header">
-                        <i class='bx bx-devices'></i>
+                <!-- Bento 2: Mobile & Web Client -->
+                <article class="bento-card bento-client glass">
+                    <div class="bento-card-header">
+                        <div class="bento-eyebrow">
+                            <span class="bento-num">02</span>
+                            <span class="bento-cat">INTERFACES & CLIENTE</span>
+                        </div>
                         <h3>Desarrollo Móvil & Web</h3>
                     </div>
-                    <div class="tech-items-grid">
+
+                    <div class="bento-pills-grid client-pills">
                         <div class="tech-pill">
                             <i class="devicon-flutter-plain colored"></i>
-                            <span>Flutter</span>
+                            <div class="pill-info">
+                                <span class="pill-name">Flutter / Dart</span>
+                                <span class="pill-sub">Apps Multiplataforma</span>
+                            </div>
                         </div>
                         <div class="tech-pill">
-                            <i class="devicon-dart-plain colored"></i>
-                            <span>Dart</span>
+                            <i class="devicon-kotlin-plain colored"></i>
+                            <div class="pill-info">
+                                <span class="pill-name">Kotlin</span>
+                                <span class="pill-sub">Desarrollo Android</span>
+                            </div>
                         </div>
                         <div class="tech-pill">
                             <i class="devicon-react-original colored"></i>
-                            <span>React</span>
+                            <div class="pill-info">
+                                <span class="pill-name">React</span>
+                                <span class="pill-sub">UI Componentizada</span>
+                            </div>
                         </div>
                         <div class="tech-pill">
                             <i class="devicon-javascript-plain colored"></i>
-                            <span>JavaScript</span>
+                            <div class="pill-info">
+                                <span class="pill-name">JavaScript</span>
+                                <span class="pill-sub">Interactividad Web</span>
+                            </div>
                         </div>
                         <div class="tech-pill">
                             <i class="devicon-html5-plain colored"></i>
-                            <span>HTML5 / CSS3</span>
+                            <div class="pill-info">
+                                <span class="pill-name">HTML5 / CSS3</span>
+                                <span class="pill-sub">Estructura & Estilo</span>
+                            </div>
                         </div>
                         <div class="tech-pill">
                             <i class="devicon-figma-plain colored"></i>
-                            <span>Figma (UI/UX)</span>
+                            <div class="pill-info">
+                                <span class="pill-name">Figma</span>
+                                <span class="pill-sub">Prototipado UI/UX</span>
+                            </div>
                         </div>
                     </div>
-                </div>
+                </article>
 
-                <!-- Categoría 3: Herramientas & Entorno -->
-                <div class="skill-category glass">
-                    <div class="skill-category-header">
-                        <i class='bx bx-terminal'></i>
-                        <h3>Herramientas & Entorno</h3>
+                <!-- Bento 3: Tools, Data & AI (Horizontal Full-Width) -->
+                <article class="bento-card bento-ecosystem glass">
+                    <div class="bento-card-header">
+                        <div class="bento-eyebrow">
+                            <span class="bento-num">03</span>
+                            <span class="bento-cat">ENTORNO, ANALYTICS & IA</span>
+                        </div>
+                        <h3>Infraestructura, Datos & Productividad</h3>
                     </div>
-                    <div class="tech-items-grid">
+
+                    <div class="bento-pills-grid eco-pills">
                         <div class="tech-pill">
                             <i class="devicon-docker-plain colored"></i>
-                            <span>Docker</span>
-                        </div>
-                        <div class="tech-pill">
-                            <i class="devicon-git-plain colored"></i>
-                            <span>Git</span>
-                        </div>
-                        <div class="tech-pill">
-                            <i class="devicon-github-original"></i>
-                            <span>GitHub</span>
+                            <div class="pill-info">
+                                <span class="pill-name">Docker</span>
+                                <span class="pill-sub">Contenedores & Despliegue</span>
+                            </div>
                         </div>
                         <div class="tech-pill">
                             <i class='bx bxs-bar-chart-alt-2 tech-custom-icon powerbi-icon'></i>
-                            <span>Power BI</span>
+                            <div class="pill-info">
+                                <span class="pill-name">Power BI</span>
+                                <span class="pill-sub">Business Intelligence</span>
+                            </div>
+                        </div>
+                        <div class="tech-pill">
+                            <i class="devicon-git-plain colored"></i>
+                            <div class="pill-info">
+                                <span class="pill-name">Git & GitHub</span>
+                                <span class="pill-sub">Control de Versiones</span>
+                            </div>
                         </div>
                         <div class="tech-pill">
                             <i class="devicon-postman-plain colored"></i>
-                            <span>Postman</span>
+                            <div class="pill-info">
+                                <span class="pill-name">Postman</span>
+                                <span class="pill-sub">Pruebas & Auditoría API</span>
+                            </div>
                         </div>
-                        <div class="tech-pill">
+                        <div class="tech-pill tech-pill-ai">
                             <i class='bx bx-bot tech-custom-icon ai-icon'></i>
-                            <span>Herramientas de IA</span>
+                            <div class="pill-info">
+                                <span class="pill-name">Herramientas de IA</span>
+                                <span class="pill-sub">Desarrollo con Agentes</span>
+                            </div>
                         </div>
                     </div>
-                </div>
+                </article>
             </div>
         </section>
 
         <!-- Contacto Section -->
         <section class="contact" id="contact">
-            <h2 class="heading">¿Hablamos? <span>Contacto</span></h2>
+            <div class="section-tag-center">
+                <span class="section-tag-sub">05 / CONTACTO</span>
+            </div>
+            <h2 class="heading-clean">Iniciemos una <span>Conversación</span></h2>
 
-            <!-- Disponibilidad Banner -->
-            <div class="availability-banner">
-                <span class="avail-pulse"><span class="pulse-dot"></span></span>
-                <p><strong>Disponible para nuevos proyectos</strong> — Trabajo freelance, remoto o presencial en Piura.
-                </p>
+            <!-- Disponibilidad Status Strip -->
+            <div class="contact-status-strip">
+                <span class="status-live-dot"></span>
+                <span class="status-live-text">Disponible para nuevos proyectos · Remoto o Presencial en Piura</span>
             </div>
 
-            <div class="contact-cards-container contact-cards-4">
-                <a href="mailto:marco.vise2005@gmail.com" class="contact-card glass">
-                    <div class="contact-card-icon contact-card-icon--email">
-                        <i class='bx bx-envelope'></i>
+            <!-- Tech Contact Desk -->
+            <div class="contact-desk glass">
+                <!-- Columna 1: Canales Directos -->
+                <div class="contact-col contact-col-direct">
+                    <div class="contact-col-header">
+                        <span class="col-num">01</span>
+                        <h3>Canales Directos</h3>
                     </div>
-                    <div class="contact-card-info">
-                        <h3>Email</h3>
-                        <p>marco.vise2005@gmail.com</p>
-                        <span class="contact-card-action">Enviar correo <i class='bx bx-right-arrow-alt'></i></span>
-                    </div>
-                </a>
+                    <p class="contact-lead-text">¿Tienes una propuesta técnica, proyecto empresarial o vacante? Hablemos
+                        directamente.</p>
 
-                <a href="https://wa.me/51918562387" target="_blank" class="contact-card glass">
-                    <div class="contact-card-icon contact-card-icon--whatsapp">
-                        <i class='bx bxl-whatsapp'></i>
+                    <div class="direct-channel-card email-channel">
+                        <div class="channel-icon-box">
+                            <i class='bx bx-envelope'></i>
+                        </div>
+                        <div class="channel-content">
+                            <span class="channel-label">Correo Electrónico</span>
+                            <span class="channel-value" id="contact-email-text">marco.vise2005@gmail.com</span>
+                            <span class="channel-response-time"><i class='bx bx-time-five'></i> Respuesta habitual en
+                                menos de 24 h</span>
+                        </div>
+                        <div class="channel-actions">
+                            <button class="btn-copy-email" id="btn-copy-email" title="Copiar correo al portapapeles"
+                                aria-label="Copiar correo">
+                                <i class='bx bx-copy'></i>
+                            </button>
+                            <a href="mailto:marco.vise2005@gmail.com" class="btn-open-email"
+                                title="Enviar correo directamente" aria-label="Abrir cliente de correo">
+                                <i class='bx bx-send'></i>
+                            </a>
+                        </div>
                     </div>
-                    <div class="contact-card-info">
-                        <h3>WhatsApp</h3>
-                        <p>+51 918 562 387</p>
-                        <span class="contact-card-action">Escribir por chat <i class='bx bx-right-arrow-alt'></i></span>
-                    </div>
-                </a>
+                </div>
 
-                <a href="https://www.linkedin.com/in/marco-vise" target="_blank" class="contact-card glass">
-                    <div class="contact-card-icon contact-card-icon--linkedin">
-                        <i class='bx bxl-linkedin'></i>
+                <!-- Columna 2: Redes Profesionales & Código -->
+                <div class="contact-col contact-col-profiles">
+                    <div class="contact-col-header">
+                        <span class="col-num">02</span>
+                        <h3>Perfiles & Código</h3>
                     </div>
-                    <div class="contact-card-info">
-                        <h3>LinkedIn</h3>
-                        <p>linkedin.com/in/marco-vise</p>
-                        <span class="contact-card-action">Ver perfil <i class='bx bx-right-arrow-alt'></i></span>
-                    </div>
-                </a>
+                    <p class="contact-lead-text">Explora mi actividad de código, arquitectura de repositorios y perfil
+                        profesional.</p>
 
-                <a href="https://github.com/Vise27" target="_blank" class="contact-card glass">
-                    <div class="contact-card-icon contact-card-icon--github">
-                        <i class='bx bxl-github'></i>
+                    <div class="profiles-list">
+                        <a href="https://www.linkedin.com/in/marco-vise" target="_blank" rel="noopener noreferrer"
+                            class="profile-link-row">
+                            <div class="profile-icon">
+                                <i class='bx bxl-linkedin'></i>
+                            </div>
+                            <div class="profile-meta">
+                                <span class="profile-name">LinkedIn</span>
+                                <span class="profile-handle">linkedin.com/in/marco-vise</span>
+                            </div>
+                            <div class="profile-external-icon">
+                                <i class='bx bx-link-external'></i>
+                            </div>
+                        </a>
+
+                        <a href="https://github.com/Vise27" target="_blank" rel="noopener noreferrer"
+                            class="profile-link-row">
+                            <div class="profile-icon">
+                                <i class='bx bxl-github'></i>
+                            </div>
+                            <div class="profile-meta">
+                                <span class="profile-name">GitHub</span>
+                                <span class="profile-handle">github.com/Vise27 · Repositorios</span>
+                            </div>
+                            <div class="profile-external-icon">
+                                <i class='bx bx-link-external'></i>
+                            </div>
+                        </a>
                     </div>
-                    <div class="contact-card-info">
-                        <h3>GitHub</h3>
-                        <p>github.com/Vise27</p>
-                        <span class="contact-card-action">Ver repositorios <i class='bx bx-right-arrow-alt'></i></span>
+
+                    <div class="location-badge-box">
+                        <i class='bx bx-map-pin'></i>
+                        <span>Ubicación base: <strong>Piura, Perú</strong> (GMT-5)</span>
                     </div>
-                </a>
+                </div>
             </div>
         </section>
     </main>
@@ -511,55 +647,144 @@
     <div class="modal-overlay" id="modal-overlay"></div>
 
     <!-- Modal Inmobiliaria -->
-    <div class="modal glass" id="modal-inmobiliaria" role="dialog" aria-modal="true" aria-labelledby="modal-inmo-title">
+    <div class="modal glass modal-case-study" id="modal-inmobiliaria" role="dialog" aria-modal="true"
+        aria-labelledby="modal-inmo-title">
         <button class="close-modal" onclick="closeModal('modal-inmobiliaria')" aria-label="Cerrar ventana"><i
                 class='bx bx-x'></i></button>
         <div class="modal-scroll">
-            <h3 id="modal-inmo-title"><i class='bx bx-building-house'></i> Sistema de Gestión Inmobiliaria y CRM</h3>
-            <p class="modal-date">Desarrollado en Odoo ERP | <strong style="color: #4CAF50;">En Producción (Sistema
-                    Interno)</strong></p>
 
-            <div class="modal-body">
-                <p class="modal-desc">Desarrollo e implementación de un módulo personalizado sobre el ecosistema ERP de
-                    Odoo. Este sistema interno centraliza y optimiza la gestión integral de propiedades, propietarios y
-                    el flujo de ventas/alquileres, integrándose de forma nativa con el módulo de CRM.</p>
-
-                <div class="modal-section">
-                    <h4><i class='bx bx-star'></i> Funcionalidades Clave</h4>
-                    <ul>
-                        <li><strong>Gestión de Propiedades:</strong> Registro completo (área, linderos, ubicación,
-                            disponibilidad).</li>
-                        <li><strong>Manejo Multimoneda:</strong> Conversión dinámica USD/Local en tiempo real para
-                            precios y comisiones.</li>
-                        <li><strong>Integración CRM:</strong> Conexión directa entre propiedades y pipeline de ventas
-                            (Leads automáticos).</li>
-                        <li><strong>Gestión de Propietarios:</strong> Historial y sincronización inteligente con
-                            oportunidades en curso.</li>
-                        <li><strong>UI/UX Personalizada:</strong> Módulos para vistas fluidas con componentes y diálogos
-                            personalizados.</li>
-                    </ul>
+            <!-- Modal Header -->
+            <header class="modal-header-study">
+                <div class="modal-eyebrow">
+                    <i class='bx bx-layer'></i> CASO DE ESTUDIO · FREELANCE & ERP
                 </div>
+                <h3 id="modal-inmo-title">Sistema de Gestión Inmobiliaria y CRM</h3>
+                <div class="modal-meta-badges">
+                    <span class="badge-status-live"><span class="live-dot"></span> En Producción (Sistema
+                        Interno)</span>
+                    <span class="badge-tech"><i class='bx bx-server'></i> Odoo ERP 17</span>
+                    <span class="badge-tech"><i class='bx bxl-python'></i> Python</span>
+                    <span class="badge-tech"><i class='bx bxl-postgresql'></i> PostgreSQL</span>
+                    <span class="badge-tech"><i class='bx bx-calendar'></i> 2025</span>
+                </div>
+            </header>
 
-                <div class="modal-section" style="margin-top: 2rem;">
-                    <h4><i class='bx bx-code-alt'></i> Tecnologías</h4>
-                    <div class="skill-tags" style="display: flex; gap: 10px; flex-wrap: wrap; margin-top: 1rem;">
-                        <span>Odoo ERP</span>
-                        <span>Python</span>
-                        <span>XML / JavaScript</span>
-                        <span>PostgreSQL</span>
+            <div class="modal-body-study">
+                <!-- Overview & Impact (Desafío & Solución) -->
+                <div class="study-overview-card">
+                    <div class="study-col">
+                        <h4><i class='bx bx-target-lock'></i> El Desafío</h4>
+                        <p>La inmobiliaria gestionaba inventario, cotizaciones y prospectos en hojas de cálculo y
+                            herramientas dispersas, provocando retrasos en el seguimiento y pérdida de trazabilidad en
+                            las ventas.</p>
+                    </div>
+                    <div class="study-col">
+                        <h4><i class='bx bx-check-shield'></i> La Solución</h4>
+                        <p>Módulo a medida sobre Odoo ERP 17 que centraliza el catálogo de inmuebles, automatiza la
+                            conversión multimoneda y se conecta directamente con el pipeline de oportunidades del CRM.
+                        </p>
                     </div>
                 </div>
 
-                <div class="modal-gallery">
-                    <img src="assets/odoo_1.png" alt="Pipeline CRM" title="Pipeline CRM Odoo" loading="lazy">
-                    <img src="assets/odoo_2.png" alt="Detalle de Propiedad y Actividades"
-                        title="Vista de Propiedad con Barra de Actividades" loading="lazy">
-                    <img src="assets/odoo_3.png" alt="Actividades Kanban" title="Gestión de Actividades en Kanban"
-                        loading="lazy">
-                    <img src="assets/odoo_4.png" alt="Historial de Actividades" title="Historial detallado"
-                        loading="lazy">
-                    <img src="assets/odoo_5.png" alt="Leads CRM" title="Gestión de Interesados y Leads" loading="lazy">
+                <!-- Showcase Gallery -->
+                <div class="study-gallery-section">
+                    <div class="section-title-bar">
+                        <h4><i class='bx bx-images'></i> Capturas del Sistema en Producción</h4>
+                        <span class="hint-text"><i class='bx bx-zoom-in'></i> Clic en cualquier captura para
+                            ampliar</span>
+                    </div>
+
+                    <div class="modal-gallery study-grid-gallery">
+                        <figure class="gallery-card featured-shot">
+                            <div class="shot-wrapper">
+                                <img src="assets/odoo_2.png" alt="Detalle de Propiedad y Barra de Actividades"
+                                    loading="lazy">
+                            </div>
+                            <figcaption>
+                                <span class="cap-num">01</span>
+                                <span class="cap-title">Ficha Técnica & Registro Inmobiliario</span>
+                            </figcaption>
+                        </figure>
+
+                        <figure class="gallery-card">
+                            <div class="shot-wrapper">
+                                <img src="assets/odoo_3.png" alt="Pipeline de Actividades en Vista Kanban"
+                                    loading="lazy">
+                            </div>
+                            <figcaption>
+                                <span class="cap-num">02</span>
+                                <span class="cap-title">Kanban de Actividades & Tareas</span>
+                            </figcaption>
+                        </figure>
+
+                        <figure class="gallery-card">
+                            <div class="shot-wrapper">
+                                <img src="assets/odoo_4.png" alt="Historial Detallado y Trazabilidad de Clientes"
+                                    loading="lazy">
+                            </div>
+                            <figcaption>
+                                <span class="cap-num">03</span>
+                                <span class="cap-title">Historial & Trazabilidad de Clientes</span>
+                            </figcaption>
+                        </figure>
+
+                        <figure class="gallery-card">
+                            <div class="shot-wrapper">
+                                <img src="assets/odoo_5.png" alt="Leads CRM y Pipeline Comercial" loading="lazy">
+                            </div>
+                            <figcaption>
+                                <span class="cap-num">04</span>
+                                <span class="cap-title">Sincronización con Pipeline CRM</span>
+                            </figcaption>
+                        </figure>
+
+                        <figure class="gallery-card">
+                            <div class="shot-wrapper">
+                                <img src="assets/odoo_1.png" alt="Control de Acceso y Sesión" loading="lazy">
+                            </div>
+                            <figcaption>
+                                <span class="cap-num">05</span>
+                                <span class="cap-title">Autenticación & Control de Roles</span>
+                            </figcaption>
+                        </figure>
+                    </div>
                 </div>
+
+                <!-- Architecture & Key Features -->
+                <div class="study-features-section">
+                    <h4><i class='bx bx-code-alt'></i> Capacidades Técnicas & Arquitectura</h4>
+                    <div class="study-features-grid">
+                        <div class="feature-card">
+                            <span class="feat-badge">01 · Backend ORM</span>
+                            <h5>Modelado de Datos & Integridad</h5>
+                            <p>Modelos en Python para propiedades, linderos y propietarios con vinculación nativa a
+                                <code>res.partner</code>.
+                            </p>
+                        </div>
+
+                        <div class="feature-card">
+                            <span class="feat-badge">02 · Lógica Financiera</span>
+                            <h5>Motor Multimoneda Dinámico</h5>
+                            <p>Conversión automática en tiempo real USD/PEN para cotizaciones, listas de precios y
+                                comisiones de agentes.</p>
+                        </div>
+
+                        <div class="feature-card">
+                            <span class="feat-badge">03 · Pipeline Comercial</span>
+                            <h5>Integración Directa con CRM</h5>
+                            <p>Generación de <code>crm.lead</code> automatizada desde el catálogo, enlazando clientes
+                                con el inmueble de interés.</p>
+                        </div>
+
+                        <div class="feature-card">
+                            <span class="feat-badge">04 · UI/UX Operativa</span>
+                            <h5>Vistas XML Dinámicas & Chatter</h5>
+                            <p>Formularios estructurados, vistas Kanban con filtros avanzados y chatter integrado para
+                                auditoría interna.</p>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
     </div>
